@@ -11,7 +11,7 @@ namespace Models
 {
     public class AddProject
     {
-        public void projectAdd(string projecttitle, string description, string uname1, string name1, string uname2, string name2, string uname3, string name3)
+        public void projectAdd(string projecttitle, string description, string creationdate, string completationdate, string uname1, string name1, string uname2, string name2, string uname3, string name3, string uname4, string name4, string uname5, string name5)
         {
             Connection cs = new Connection();
             SqlConnection con = cs.CreateConnection();
@@ -19,7 +19,7 @@ namespace Models
             try
             {
 
-                String query = "INSERT INTO tbl_project VALUES('" + projecttitle + "','" + description + "','" + uname1 + "','" + name1 + "','" + uname2 + "','" + name2 + "','" + uname3 + "','" + name3 + "')";
+                String query = "INSERT INTO Projects VALUES('" + projecttitle + "','" + description + "','" + creationdate + "','" + completationdate + "','" + uname1 + "','" + name1 + "','" + uname2 + "','" + name2 + "','" + uname3 + "','" + name3 + "','" + uname4 + "','" + name4 + "','" + uname5 + "','" + name5 + "')";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
@@ -43,7 +43,7 @@ namespace Models
 
             try
             {
-                String query = "select * from tbl_project where project='" + projecttitle + "'";
+                String query = "select * from Projects where project='" + projecttitle + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
