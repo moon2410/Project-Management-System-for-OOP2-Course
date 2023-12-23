@@ -106,5 +106,12 @@ namespace Project_Management_System
         {
 
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminFacultyBoard loginPage = new AdminFacultyBoard();
+            loginPage.Show();
+        }
     }
 }
