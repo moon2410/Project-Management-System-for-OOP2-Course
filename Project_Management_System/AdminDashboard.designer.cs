@@ -37,6 +37,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_facultylist = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btn_facultylist = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip_profile.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Azure;
             this.panel4.Location = new System.Drawing.Point(74, 291);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(89, 6);
             this.panel4.TabIndex = 8;
@@ -68,7 +68,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Azure;
             this.panel3.Location = new System.Drawing.Point(231, 74);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1027, 6);
             this.panel3.TabIndex = 16;
@@ -78,11 +78,11 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(296, 149);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(920, 454);
+            this.dataGridView2.Size = new System.Drawing.Size(908, 454);
             this.dataGridView2.TabIndex = 17;
             // 
             // label1
@@ -101,7 +101,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Location = new System.Drawing.Point(0, 188);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 6);
             this.panel2.TabIndex = 6;
@@ -153,10 +153,31 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BackButton);
             this.panel1.Location = new System.Drawing.Point(8, -13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 692);
             this.panel1.TabIndex = 15;
+            // 
+            // btn_facultylist
+            // 
+            this.btn_facultylist.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn_facultylist.Location = new System.Drawing.Point(74, 374);
+            this.btn_facultylist.Name = "btn_facultylist";
+            this.btn_facultylist.Size = new System.Drawing.Size(87, 32);
+            this.btn_facultylist.TabIndex = 283;
+            this.btn_facultylist.Text = "Faculty List";
+            this.btn_facultylist.UseVisualStyleBackColor = false;
+            this.btn_facultylist.Click += new System.EventHandler(this.btn_facultylist_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SkyBlue;
+            this.button3.Location = new System.Drawing.Point(74, 439);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 32);
+            this.button3.TabIndex = 282;
+            this.button3.Text = "MessageBox";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // BackButton
             // 
@@ -186,7 +207,7 @@
             this.button6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Location = new System.Drawing.Point(1145, 40);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(71, 24);
             this.button6.TabIndex = 279;
@@ -196,7 +217,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(972, 36);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(169, 27);
@@ -261,27 +282,6 @@
             this.logOutToolStripMenuItem.Text = "LogOut";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click_1);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.Location = new System.Drawing.Point(74, 439);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 32);
-            this.button3.TabIndex = 282;
-            this.button3.Text = "MessageBox";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // btn_facultylist
-            // 
-            this.btn_facultylist.BackColor = System.Drawing.Color.SkyBlue;
-            this.btn_facultylist.Location = new System.Drawing.Point(74, 374);
-            this.btn_facultylist.Name = "btn_facultylist";
-            this.btn_facultylist.Size = new System.Drawing.Size(87, 32);
-            this.btn_facultylist.TabIndex = 283;
-            this.btn_facultylist.Text = "Faculty List";
-            this.btn_facultylist.UseVisualStyleBackColor = false;
-            this.btn_facultylist.Click += new System.EventHandler(this.btn_facultylist_Click);
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,7 +294,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1285, 716);
             this.MinimumSize = new System.Drawing.Size(1284, 714);
