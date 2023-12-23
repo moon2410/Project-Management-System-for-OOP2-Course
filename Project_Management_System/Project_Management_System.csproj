@@ -91,6 +91,12 @@
     <Compile Include="AdminFacultyBoard.designer.cs">
       <DependentUpon>AdminFacultyBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMessageBox.Designer.cs">
+      <DependentUpon>AdminMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Faculty TaskBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminFacultyBoard.resx">
       <DependentUpon>AdminFacultyBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMessageBox.resx">
+      <DependentUpon>AdminMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty TaskBoard.resx">
       <DependentUpon>Faculty TaskBoard.cs</DependentUpon>

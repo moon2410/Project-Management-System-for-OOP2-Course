@@ -107,5 +107,15 @@ namespace Project_Management_System
         {
 
         }
+
+        private void btn_facultylist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

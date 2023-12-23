@@ -40,3 +40,7 @@ D:\repos\Project_Management_System\obj\Debug\Project_Management_System.Remove_St
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.RemoveStudentList.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.StudentProjectSubmit.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminAddFaculty.resources
+D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminChangePass.resources
+D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminMessageBox.resources
+D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyAddproject.resources
+D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyEditProject.resources
