@@ -95,6 +95,7 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -102,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.menuStrip_profile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -267,7 +269,7 @@
             this.lblRole.BackColor = System.Drawing.Color.PowderBlue;
             this.lblRole.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
             this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblRole.Location = new System.Drawing.Point(230, 152);
+            this.lblRole.Location = new System.Drawing.Point(236, 186);
             this.lblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(163, 54);
@@ -287,7 +289,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.panel4.Location = new System.Drawing.Point(-1, 227);
+            this.panel4.Location = new System.Drawing.Point(0, 245);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(399, 10);
@@ -306,7 +308,6 @@
             this.refreshToolStripMenuItem});
             this.menuStrip_profile.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_profile.Name = "menuStrip_profile";
-            this.menuStrip_profile.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip_profile.Size = new System.Drawing.Size(1898, 33);
             this.menuStrip_profile.TabIndex = 197;
             this.menuStrip_profile.Text = "menuStrip_profile";
@@ -759,12 +760,22 @@
             this.panel20.Size = new System.Drawing.Size(10, 272);
             this.panel20.TabIndex = 100;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.MintCream;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 179);
+            this.pictureBox1.TabIndex = 223;
+            this.pictureBox1.TabStop = false;
+            // 
             // StudentDeshBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel20);
             this.Controls.Add(this.panel19);
             this.Controls.Add(this.panel18);
@@ -836,6 +847,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.menuStrip_profile.ResumeLayout(false);
             this.menuStrip_profile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -908,5 +920,6 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

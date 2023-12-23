@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_Management_System
 {
-    public partial class FacultyAddProject : Form
+    public partial class FacultyAddproject : Form
     {
-        public FacultyAddProject()
+        public FacultyAddproject()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FacultyDashboard ads = new FacultyDashboard();
-            ads.Show();
         }
     }
 }

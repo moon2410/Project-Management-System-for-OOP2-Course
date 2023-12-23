@@ -93,6 +93,10 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_currentaddress
@@ -277,7 +281,7 @@
             this.txt_password.BackColor = System.Drawing.SystemColors.Info;
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_password.Location = new System.Drawing.Point(1324, 411);
+            this.txt_password.Location = new System.Drawing.Point(1396, 651);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -288,7 +292,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1006, 420);
+            this.label12.Location = new System.Drawing.Point(1078, 660);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(226, 32);
             this.label12.TabIndex = 52;
@@ -299,7 +303,7 @@
             this.textBox11.BackColor = System.Drawing.SystemColors.Info;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox11.Location = new System.Drawing.Point(1323, 474);
+            this.textBox11.Location = new System.Drawing.Point(1395, 714);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.PasswordChar = '*';
@@ -310,7 +314,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1006, 478);
+            this.label13.Location = new System.Drawing.Point(1078, 718);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(340, 32);
             this.label13.TabIndex = 54;
@@ -365,7 +369,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1312, 271);
+            this.label17.Location = new System.Drawing.Point(1384, 511);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(337, 59);
             this.label17.TabIndex = 98;
@@ -820,12 +824,46 @@
             this.panel32.Size = new System.Drawing.Size(9, 60);
             this.panel32.TabIndex = 139;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Brown;
+            this.button3.Location = new System.Drawing.Point(1440, 380);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(133, 57);
+            this.button3.TabIndex = 158;
+            this.button3.Text = "Upload";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1107, 274);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(271, 32);
+            this.label7.TabIndex = 157;
+            this.label7.Text = "Upload Your Photo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.MintCream;
+            this.pictureBox1.Location = new System.Drawing.Point(1395, 195);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 179);
+            this.pictureBox1.TabIndex = 156;
+            this.pictureBox1.TabStop = false;
+            // 
             // RegisterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel19);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel20);
@@ -898,6 +936,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterPage";
             this.Load += new System.EventHandler(this.RegisterPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -969,5 +1008,8 @@
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

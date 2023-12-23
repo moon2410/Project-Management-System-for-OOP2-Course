@@ -97,6 +97,12 @@
     <Compile Include="Faculty TaskBoard.Designer.cs">
       <DependentUpon>Faculty TaskBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacultyAddProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyAddProject.Designer.cs">
+      <DependentUpon>FacultyAddProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="facultyAppliedStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="FacultyDashboard.designer.cs">
       <DependentUpon>FacultyDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyEditProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyEditProject.Designer.cs">
+      <DependentUpon>FacultyEditProject.cs</DependentUpon>
     </Compile>
     <Compile Include="FacultyFacultyList.cs">
       <SubType>Form</SubType>
@@ -255,6 +267,9 @@
     <EmbeddedResource Include="Faculty TaskBoard.resx">
       <DependentUpon>Faculty TaskBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacultyAddProject.resx">
+      <DependentUpon>FacultyAddProject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="facultyAppliedStudent.resx">
       <DependentUpon>facultyAppliedStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacultyDashboard.resx">
       <DependentUpon>FacultyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyEditProject.resx">
+      <DependentUpon>FacultyEditProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacultyFacultyList.resx">
       <DependentUpon>FacultyFacultyList.cs</DependentUpon>
