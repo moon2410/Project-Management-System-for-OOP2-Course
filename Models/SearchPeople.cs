@@ -10,14 +10,16 @@ namespace Models
 {
     public class SearchPeople
     {
-        string[] name = new string[100000];
-        string[] uname = new string[1000000];
+        string[] FirstName = new string[100000];
+        string[] LastName = new string[100000];
+        string[] UserName = new string[1000000];
 
 
-        public SearchPeople(string[] name, string[] uname)
+        public SearchPeople(string[] FirstName, string[] LastName, string[] UserName)
         {
-            this.name = name;
-            this.uname = uname;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.UserName = UserName;
         }
 
 
@@ -30,7 +32,7 @@ namespace Models
 
             try
             {
-                string query = "Select * from tbl_profile where name like '%" + name + "%'";
+                string query = "Select * from Students where FirstName like '%" + name + "%' or LastName like '%" + name +"%'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
@@ -49,25 +51,29 @@ namespace Models
 
             Connection cs = new Connection();
             SqlConnection con = cs.CreateConnection();
-            string query = "Select * from tbl_profile where name like '%" + username + "%'";
+            string query = "Select * from Students where UserName like '%" + username + "%'";
             SqlCommand com = new SqlCommand(query, con);
 
             SqlDataReader reader = com.ExecuteReader();
             for (int i = 1; reader.Read(); i++)
             {
-                name[i] = reader[1].ToString();
-                uname[i] = reader[0].ToString();
+                FirstName[i] = reader[1].ToString();
+                LastName[i] = reader[1].ToString();
+                UserName[i] = reader[0].ToString();
             }
             reader.Close();
             con.Close();
             if (flag == 1)
             {
-                return name;
+                return FirstName;
             }
-
+            else if (flag == 2)
+            {
+                return LastName;
+            }
             else
             {
-                return uname;
+                return UserName;
             }
 
         }

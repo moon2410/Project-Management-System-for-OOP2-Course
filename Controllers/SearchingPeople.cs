@@ -9,12 +9,13 @@ namespace Controllers
 {
     public class SearchingPeople
     {
-        string[] name = new string[100000];
-        string[] uname = new string[1000000];
+        string[] firstname = new string[100000];
+        string[] lastname = new string[1000000];
+        string[] username = new string[1000000];
 
         public int searchResult(string searchkey)
         {
-            SearchPeople sp = new SearchPeople(name, uname);
+            SearchPeople sp = new SearchPeople(firstname, lastname, username);
             int rows = 0;
             rows = sp.nameCheck(searchkey);
             return rows;
@@ -22,7 +23,7 @@ namespace Controllers
 
         public string[] peopleDisplay(string searchkey, int flag)
         {
-            SearchPeople sp = new SearchPeople(name, uname);
+            SearchPeople sp = new SearchPeople(firstname, lastname, username);
             int rows = 0;
             rows = searchResult(searchkey);
 
@@ -30,12 +31,15 @@ namespace Controllers
             {
                 if (flag == 1)
                 {
-                    return name = sp.showingData(searchkey, flag);
+                    return firstname = sp.showingData(searchkey, flag);
                 }
-
+                else if (flag == 2)
+                {
+                    return lastname = sp.showingData(searchkey, flag);
+                }
                 else
                 {
-                    return uname = sp.showingData(searchkey, flag);
+                    return username = sp.showingData(searchkey, flag);
                 }
             }
 

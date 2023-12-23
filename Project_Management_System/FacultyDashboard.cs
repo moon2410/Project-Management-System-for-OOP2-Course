@@ -157,5 +157,12 @@ namespace Project_Management_System
             facultyProfile ads = new facultyProfile(username);
             ads.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultyAddproject ads = new FacultyAddproject();
+            ads.Show();
+        }
     }
 }
