@@ -122,6 +122,8 @@ namespace Project_Management_System
 
         private void FacultyStudentist_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pMSDBDataSet.Students' table. You can move, or remove it, as needed.
+            this.studentsTableAdapter.Fill(this.pMSDBDataSet.Students);
 
         }
     }
