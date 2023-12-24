@@ -30,6 +30,17 @@ namespace Controllers
 
             return result;
         }
+        public string[] datashowadmin(string username, string type)
+        {
+            ShowData sd = new ShowData(username, type);
+
+            String[] result = new String[20];
+
+
+            result = sd.showingNameAdmin();
+
+            return result;
+        }
 
     }
 }

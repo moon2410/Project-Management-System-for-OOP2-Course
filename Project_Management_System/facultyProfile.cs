@@ -39,7 +39,7 @@ namespace Project_Management_System
         {
             DataShow ds = new DataShow();
 
-            string[] result = ds.datashowfaculty(username, "lala");
+            string[] result = ds.datashowfaculty(username, "faculty");
 
             label_Username.Text = result[0];
             label_FirstName.Text = result[1];

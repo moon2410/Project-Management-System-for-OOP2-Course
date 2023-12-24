@@ -48,11 +48,15 @@ namespace Project_Management_System
                 MessageBox.Show(" Please Enter Username and Password");
 
             }
-            else if (radioButton3.Checked && txt_username.Text=="ad" && txt_password.Text=="sw")
+            else if (radioButton3.Checked)
             {
-                this.Hide();
-                AdminDashboard rg = new AdminDashboard();
-                rg.Show();
+                if (ap.authenticationCheckadmin(txt_username.Text, txt_password.Text))
+                {
+                    this.Hide();
+                    AdminDashboard rg = new AdminDashboard(txt_username.Text);
+                    rg.Show();
+                }
+                
 
             }
 
@@ -65,9 +69,6 @@ namespace Project_Management_System
                     rg.Show();
 
                 }
-                
-
-
             }
 
             else if (radioButton1.Checked) 

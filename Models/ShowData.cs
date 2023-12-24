@@ -52,13 +52,44 @@ namespace Models
         }
         public ShowData(string username, string type)
         {
-            this.username = username;
-            con = cs.CreateConnection();
-            quary = "select * from Faculties where username='" + username + "'";
-            com = new SqlCommand(quary, con);
+            if (type == "faculty")
+            {
+                this.username = username;
+                con = cs.CreateConnection();
+                quary = "select * from Faculties where username='" + username + "'";
+                com = new SqlCommand(quary, con);
+            }
+            else if (type == "admin")
+            {
+                this.username = username;
+                con = cs.CreateConnection();
+                quary = "select * from Admins where username='" + username + "'";
+                com = new SqlCommand(quary, con);
+            }
+            
         }
 
         public string[] showingNameFaculty()
+        {
+
+            int i = 0;
+            SqlDataReader reader = com.ExecuteReader();
+            reader.Read();
+            info[i++] = reader["UserName"].ToString();
+            info[i++] = reader["FirstName"].ToString();
+            info[i++] = reader["LastName"].ToString();
+            info[i++] = reader["PhoneNumber"].ToString();
+            info[i++] = reader["EMail"].ToString();
+            info[i++] = reader["Gender"].ToString();
+            info[i++] = reader["BirthDate"].ToString();
+            info[i++] = reader["Department"].ToString();
+            info[i++] = reader["CurrentAddress"].ToString();
+
+
+            reader.Close();
+            return info;
+        }
+        public string[] showingNameAdmin()
         {
 
             int i = 0;

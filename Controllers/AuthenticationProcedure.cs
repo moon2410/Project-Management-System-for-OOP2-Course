@@ -25,5 +25,13 @@ namespace Controllers
             return au.LoginConnectionfaculty(username, pass);
 
         }
+        public Boolean authenticationCheckadmin(string username, string pass)
+        {
+            Authintication au = new Authintication();
+
+
+            return au.LoginConnectionadmin(username, pass);
+
+        }
     }
 }

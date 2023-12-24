@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,14 @@ namespace Project_Management_System
 {
     public partial class AdminAccount : Form
     {
+        string username = "";
         public AdminAccount()
         {
+            InitializeComponent();
+        }
+        public AdminAccount(string username)
+        {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -77,7 +84,7 @@ namespace Project_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminDashboard ads = new AdminDashboard();
+            AdminDashboard ads = new AdminDashboard(username);
             ads.Show();
         }
 
@@ -104,7 +111,19 @@ namespace Project_Management_System
 
         private void AdminAccount_Load(object sender, EventArgs e)
         {
+            DataShow ds = new DataShow();
 
+            string[] result = ds.datashowfaculty(username, "admin");
+
+            label_Username.Text = result[0];
+            label_FirstName.Text = result[1];
+            label_LastName.Text = result[2];
+            label_PhoneNumber.Text = result[3];
+            label_Email.Text = result[4];
+            label_Gender.Text = result[5];
+            label_BirthDate.Text = result[6];
+            label_Department.Text = result[7];
+            label_CurrentAddress.Text = result[8];
         }
 
         private void button3_Click_1(object sender, EventArgs e)
