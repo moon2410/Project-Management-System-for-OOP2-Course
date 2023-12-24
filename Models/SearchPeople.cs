@@ -52,7 +52,7 @@ namespace Models
 
             Connection cs = new Connection();
             SqlConnection con = cs.CreateConnection();
-            string query = "Select * from Students where FirstName like '%" + username + "%' or LastName like '%" + username + "%' or UserName like '%" + username + "%'";
+            string query = "Select * from Students where FirstName like '%" + username + "%'  or LastName like '%" + username + "%' or UserName like '%" + username + "%'";
             SqlCommand com = new SqlCommand(query, con);
 
             SqlDataReader reader = com.ExecuteReader();
