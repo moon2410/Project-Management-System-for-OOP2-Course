@@ -143,9 +143,9 @@ namespace Project_Management_System
             else 
             {
                 birthdate = txt_birthyear.Text + "-" + txt_birthmonth.Text + "-" + txt_birthday.Text;
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Repos\Project_Management_System\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insert into Faculties(UserName,FirstName,LastName,PhoneNumber,EMail,Gender,BirthDate,Department,CurrentAddress)" +
+                SqlCommand cmd = new SqlCommand("insert into Admins(UserName,FirstName,LastName,PhoneNumber,EMail,Gender,BirthDate,Department,CurrentAddress)" +
                     " values(@username,@firstname,@lastname,@phonenumber,@email,@gender,@birthdate,@department,@currentaddress)", conn);
                 cmd.Parameters.AddWithValue("@username", txt_username.Text);
                 cmd.Parameters.AddWithValue("@firstname", txt_firstname.Text);
@@ -159,9 +159,9 @@ namespace Project_Management_System
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
-                SqlConnection log = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection log = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Repos\Project_Management_System\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
                 log.Open();
-                SqlCommand cmd2 = new SqlCommand("insert into FacultyAuthenticate(username,password)values(@username,@password)", log);
+                SqlCommand cmd2 = new SqlCommand("insert into AdminAuthenticate(username,password)values(@username,@password)", log);
                 cmd2.Parameters.AddWithValue("@username", txt_username.Text);
                 cmd2.Parameters.AddWithValue("@password", txt_password.Text);
 

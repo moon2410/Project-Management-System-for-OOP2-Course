@@ -12,7 +12,7 @@ namespace Models
         public SqlConnection CreateConnection()
         {
             SqlConnection con = new SqlConnection();
-            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Repos\Project_Management_System\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
             con.Open();
 
             return con;

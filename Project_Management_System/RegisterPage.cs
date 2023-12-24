@@ -76,7 +76,7 @@ namespace Project_Management_System
             else
             {
                 birthdate = txt_birthyear.Text +"-"+ txt_birthmonth.Text +"-"+ txt_birthday.Text;
-                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Repos\Project_Management_System\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("insert into Students(UserName,FirstName,LastName,PhoneNumber,EMail,Gender,BirthDate,Department,Semester,CGPA,CurrentAddress)" +
                     " values(@username,@firstname,@lastname,@phonenumber,@email,@gender,@birthdate,@department,@semester,@cgpa,@currentaddress)", conn);
@@ -94,7 +94,7 @@ namespace Project_Management_System
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
-                SqlConnection log = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\repos\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection log = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Repos\Project_Management_System\PMSDB.mdf;Integrated Security=True;Connect Timeout=30");
                 log.Open();
                 SqlCommand cmd2 = new SqlCommand("insert into Authenticate(username,password)values(@username,@password)", log);
                 cmd2.Parameters.AddWithValue("@username", txt_username.Text);

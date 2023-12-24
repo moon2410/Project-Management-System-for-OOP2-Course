@@ -32,9 +32,7 @@ namespace Project_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Home hm = new Home();
-            hm.Show();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +54,13 @@ namespace Project_Management_System
                     AdminDashboard rg = new AdminDashboard(txt_username.Text);
                     rg.Show();
                 }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password Try again!");
+                    txt_username.Clear();
+                    txt_password.Clear();
+                    txt_username.Focus();
+                }
                 
 
             }
@@ -69,6 +74,13 @@ namespace Project_Management_System
                     rg.Show();
 
                 }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password Try again!");
+                    txt_username.Clear();
+                    txt_password.Clear();
+                    txt_username.Focus();
+                }
             }
 
             else if (radioButton1.Checked) 
@@ -80,6 +92,13 @@ namespace Project_Management_System
                     StudentDeshBoard sdb = new StudentDeshBoard(txt_username.Text);
                     sdb.Show();
 
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password Try again!");
+                    txt_username.Clear();
+                    txt_password.Clear();
+                    txt_username.Focus();
                 }
 
             } 
