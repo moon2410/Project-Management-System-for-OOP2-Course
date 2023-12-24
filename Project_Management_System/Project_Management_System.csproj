@@ -181,6 +181,11 @@
     <Compile Include="LoginPage.designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="PMSDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterPage.cs">
@@ -360,6 +365,17 @@
     <EmbeddedResource Include="StudentTsk.resx">
       <DependentUpon>StudentTsk.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="PMSDBDataSet.xsc">
+      <DependentUpon>PMSDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDBDataSet.xss">
+      <DependentUpon>PMSDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
