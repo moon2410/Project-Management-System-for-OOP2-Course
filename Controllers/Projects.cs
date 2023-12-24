@@ -9,13 +9,13 @@ namespace Controllers
 {
     public class Projects
     {
-        public void addingProject(string tablename, string projecttitle, string description, string creationdate, string completationdate, string uname1, string name1, string uname2, string name2, string uname3, string name3, string uname4, string name4, string uname5, string name5)
+        public void addingProject(string tablename, string projecttitle, string description,string projectcreator, string creationdate, string completationdate, string uname1, string name1, string uname2, string name2, string uname3, string name3, string uname4, string name4, string uname5, string name5)
         {
             AddProject ap = new AddProject();
             int rows = ap.checkProject(projecttitle);
             if (rows == 0)
             {
-                ap.projectAdd(projecttitle, description, creationdate, completationdate, uname1, name1, uname2, name2, uname3, name3, uname4, name4, uname5, name5);
+                ap.projectAdd(projecttitle, description, projectcreator, creationdate, completationdate, uname1, name1, uname2, name2, uname3, name3, uname4, name4, uname5, name5);
                 ap.createProjectTable(tablename);
             }
             else

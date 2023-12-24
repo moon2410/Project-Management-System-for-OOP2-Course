@@ -161,7 +161,7 @@ namespace Project_Management_System
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FacultyAddproject ads = new FacultyAddproject(username);
+            Add_Project ads = new Add_Project(username);
             ads.Show();
         }
     }

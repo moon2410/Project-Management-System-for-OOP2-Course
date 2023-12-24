@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Project.designer.cs">
+      <DependentUpon>Add Project.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,12 +108,6 @@
     </Compile>
     <Compile Include="Faculty TaskBoard.Designer.cs">
       <DependentUpon>Faculty TaskBoard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FacultyAddProject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FacultyAddProject.Designer.cs">
-      <DependentUpon>FacultyAddProject.cs</DependentUpon>
     </Compile>
     <Compile Include="facultyAppliedStudent.cs">
       <SubType>Form</SubType>
@@ -260,6 +260,9 @@
     <Compile Include="StudentTsk.designer.cs">
       <DependentUpon>StudentTsk.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add Project.resx">
+      <DependentUpon>Add Project.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminAccount.resx">
       <DependentUpon>AdminAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,9 +283,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty TaskBoard.resx">
       <DependentUpon>Faculty TaskBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FacultyAddProject.resx">
-      <DependentUpon>FacultyAddProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="facultyAppliedStudent.resx">
       <DependentUpon>facultyAppliedStudent.cs</DependentUpon>
