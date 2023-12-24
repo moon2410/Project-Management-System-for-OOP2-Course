@@ -62,7 +62,7 @@ namespace Project_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminDashboard ads = new AdminDashboard();
+            AdminDashboard ads = new AdminDashboard(username);
             ads.Show();
         }
 
@@ -83,7 +83,7 @@ namespace Project_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminAccount ads = new AdminAccount();
+            AdminAccount ads = new AdminAccount(username);
             ads.Show();
         }
 
@@ -178,12 +178,35 @@ namespace Project_Management_System
 
         private void btn_addfaculty_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AdminAddFaculty adminAddFaculty = new AdminAddFaculty(username);
+            adminAddFaculty.Show();
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminMessageBox adminMessageBox = new AdminMessageBox(username);
+            adminMessageBox.Show();
+        }
+
+        private void btn_facultylist_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminFacultyBoard loginPage = new AdminFacultyBoard(username);
+            loginPage.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminChangePass adminChangePass = new AdminChangePass(username);
+            adminChangePass.Show();
         }
     }
 }

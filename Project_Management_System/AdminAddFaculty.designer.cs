@@ -75,6 +75,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +86,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Azure;
             this.panel4.Location = new System.Drawing.Point(74, 341);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(89, 6);
             this.panel4.TabIndex = 8;
@@ -105,7 +107,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Location = new System.Drawing.Point(0, 188);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 6);
             this.panel2.TabIndex = 6;
@@ -158,7 +160,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BackButton);
             this.panel1.Location = new System.Drawing.Point(8, -13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 692);
             this.panel1.TabIndex = 22;
@@ -172,6 +174,7 @@
             this.btn_facultylist.TabIndex = 26;
             this.btn_facultylist.Text = "Faculty List";
             this.btn_facultylist.UseVisualStyleBackColor = false;
+            this.btn_facultylist.Click += new System.EventHandler(this.btn_facultylist_Click);
             // 
             // button6
             // 
@@ -182,6 +185,7 @@
             this.button6.TabIndex = 25;
             this.button6.Text = "MessageBox";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // BackButton
             // 
@@ -213,6 +217,9 @@
             // 
             // profileToolStripMenuItem
             // 
+            this.profileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editProfileToolStripMenuItem,
+            this.changePasswordToolStripMenuItem});
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
             this.profileToolStripMenuItem.Text = "Account";
@@ -376,7 +383,7 @@
             this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_username.Location = new System.Drawing.Point(608, 57);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(2);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(268, 27);
@@ -396,7 +403,7 @@
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox11.Location = new System.Drawing.Point(608, 461);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.PasswordChar = '*';
@@ -420,7 +427,7 @@
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_password.Location = new System.Drawing.Point(608, 423);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -444,7 +451,7 @@
             this.txt_currentaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_currentaddress.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_currentaddress.Location = new System.Drawing.Point(608, 379);
-            this.txt_currentaddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_currentaddress.Margin = new System.Windows.Forms.Padding(2);
             this.txt_currentaddress.Multiline = true;
             this.txt_currentaddress.Name = "txt_currentaddress";
             this.txt_currentaddress.Size = new System.Drawing.Size(268, 27);
@@ -456,7 +463,7 @@
             this.txt_phonenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_phonenumber.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_phonenumber.Location = new System.Drawing.Point(608, 177);
-            this.txt_phonenumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_phonenumber.Margin = new System.Windows.Forms.Padding(2);
             this.txt_phonenumber.Multiline = true;
             this.txt_phonenumber.Name = "txt_phonenumber";
             this.txt_phonenumber.Size = new System.Drawing.Size(268, 27);
@@ -468,7 +475,7 @@
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_email.Location = new System.Drawing.Point(608, 221);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(268, 27);
@@ -480,7 +487,7 @@
             this.txt_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lastname.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_lastname.Location = new System.Drawing.Point(608, 137);
-            this.txt_lastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_lastname.Margin = new System.Windows.Forms.Padding(2);
             this.txt_lastname.Multiline = true;
             this.txt_lastname.Name = "txt_lastname";
             this.txt_lastname.Size = new System.Drawing.Size(268, 27);
@@ -492,7 +499,7 @@
             this.txt_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_firstname.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_firstname.Location = new System.Drawing.Point(608, 96);
-            this.txt_firstname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_firstname.Margin = new System.Windows.Forms.Padding(2);
             this.txt_firstname.Multiline = true;
             this.txt_firstname.Name = "txt_firstname";
             this.txt_firstname.Size = new System.Drawing.Size(268, 27);
@@ -623,7 +630,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Brown;
             this.button3.Location = new System.Drawing.Point(1065, 238);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(134, 37);
             this.button3.TabIndex = 320;
@@ -645,11 +652,24 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.MintCream;
             this.pictureBox1.Location = new System.Drawing.Point(1065, 118);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(134, 116);
             this.pictureBox1.TabIndex = 318;
             this.pictureBox1.TabStop = false;
+            // 
+            // editProfileToolStripMenuItem
+            // 
+            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editProfileToolStripMenuItem.Text = "Edit Profile ";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // AdminAddFaculty
             // 
@@ -688,7 +708,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip_profile);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1283, 710);
             this.MinimumSize = new System.Drawing.Size(1282, 708);
@@ -755,5 +775,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }

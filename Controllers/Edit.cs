@@ -37,6 +37,11 @@ namespace Controllers
             EditProfile ep = new EditProfile();
             ep.editPasswordfaculty(username, password);
         }
+        public void changePasswordadmin(string username, string password)
+        {
+            EditProfile ep = new EditProfile();
+            ep.editPasswordadmin(username, password);
+        }
 
     }
 }

@@ -11,10 +11,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Project_Management_System
 {
+    
     public partial class AdminMessageBox : Form
     {
+        string username = "";
         public AdminMessageBox()
         {
+            InitializeComponent();
+        }
+        public AdminMessageBox(string username)
+        {
+            this.username = username;   
             InitializeComponent();
         }
 
@@ -28,7 +35,7 @@ namespace Project_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminAccount ads = new AdminAccount();
+            AdminAccount ads = new AdminAccount(username);
             ads.Show();
         }
 
@@ -49,7 +56,7 @@ namespace Project_Management_System
         private void btn_facultylist_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminFacultyBoard afb = new AdminFacultyBoard();
+            AdminFacultyBoard afb = new AdminFacultyBoard(username);
             afb.Show();
         }
 
@@ -63,7 +70,7 @@ namespace Project_Management_System
         private void btn_addfaculty_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminAddFaculty ads = new AdminAddFaculty();
+            AdminAddFaculty ads = new AdminAddFaculty(username);
             ads.Show();
         }
 
@@ -79,6 +86,25 @@ namespace Project_Management_System
             this.Hide();
             LoginPage ads = new LoginPage();
             ads.Show();
+        }
+
+        private void AdminMessageBox_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminMessageBox adminMessageBox = new AdminMessageBox(username);
+            adminMessageBox.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminChangePass adminChangePass = new AdminChangePass(username);
+            adminChangePass.Show();
         }
     }
 }

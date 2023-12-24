@@ -66,6 +66,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_Department = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip_profile.SuspendLayout();
             this.SuspendLayout();
@@ -142,6 +144,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Account";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -182,6 +185,7 @@
             this.button6.TabIndex = 24;
             this.button6.Text = "MessageBox";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // BackButton
             // 
@@ -213,6 +217,9 @@
             // 
             // profileToolStripMenuItem
             // 
+            this.profileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePasswordToolStripMenuItem,
+            this.changePasswordToolStripMenuItem1});
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
             this.profileToolStripMenuItem.Text = "Account";
@@ -468,6 +475,19 @@
             this.label3.TabIndex = 215;
             this.label3.Text = "Department          ";
             // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Text = "Edit Profile";
+            // 
+            // changePasswordToolStripMenuItem1
+            // 
+            this.changePasswordToolStripMenuItem1.Name = "changePasswordToolStripMenuItem1";
+            this.changePasswordToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem1.Text = "Change password";
+            this.changePasswordToolStripMenuItem1.Click += new System.EventHandler(this.changePasswordToolStripMenuItem1_Click);
+            // 
             // AdminAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,5 +572,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_Department;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem1;
     }
 }

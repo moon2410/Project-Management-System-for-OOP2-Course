@@ -98,5 +98,27 @@ namespace Controllers
             }
 
         }
+        public void editPasswordadmin(string username, string password)
+        {
+            Connection cs = new Connection();
+            SqlConnection con = cs.CreateConnection();
+
+            try
+            {
+                String query = "UPDATE AdminAuthenticate SET password='" + password + "'where username='" + username + "'";
+
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
     }
 }

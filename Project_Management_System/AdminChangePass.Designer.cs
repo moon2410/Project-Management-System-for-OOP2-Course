@@ -42,9 +42,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(66, 220);
+            this.label3.Location = new System.Drawing.Point(44, 143);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 32);
+            this.label3.Size = new System.Drawing.Size(148, 24);
             this.label3.TabIndex = 218;
             this.label3.Text = "New Password";
             // 
@@ -53,20 +54,22 @@
             this.txt_newpassword.BackColor = System.Drawing.SystemColors.Info;
             this.txt_newpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_newpassword.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_newpassword.Location = new System.Drawing.Point(359, 215);
+            this.txt_newpassword.Location = new System.Drawing.Point(239, 140);
+            this.txt_newpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_newpassword.Multiline = true;
             this.txt_newpassword.Name = "txt_newpassword";
             this.txt_newpassword.PasswordChar = '*';
-            this.txt_newpassword.Size = new System.Drawing.Size(400, 39);
+            this.txt_newpassword.Size = new System.Drawing.Size(268, 27);
             this.txt_newpassword.TabIndex = 217;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 301);
+            this.label2.Location = new System.Drawing.Point(44, 196);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 32);
+            this.label2.Size = new System.Drawing.Size(178, 24);
             this.label2.TabIndex = 216;
             this.label2.Text = "Confirm Password";
             // 
@@ -75,19 +78,21 @@
             this.txt_confirmpassword.BackColor = System.Drawing.SystemColors.Info;
             this.txt_confirmpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_confirmpassword.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_confirmpassword.Location = new System.Drawing.Point(359, 297);
+            this.txt_confirmpassword.Location = new System.Drawing.Point(239, 193);
+            this.txt_confirmpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_confirmpassword.Multiline = true;
             this.txt_confirmpassword.Name = "txt_confirmpassword";
             this.txt_confirmpassword.PasswordChar = '*';
-            this.txt_confirmpassword.Size = new System.Drawing.Size(400, 39);
+            this.txt_confirmpassword.Size = new System.Drawing.Size(268, 27);
             this.txt_confirmpassword.TabIndex = 215;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.Location = new System.Drawing.Point(72, 555);
+            this.button2.Location = new System.Drawing.Point(48, 361);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 49);
+            this.button2.Size = new System.Drawing.Size(88, 32);
             this.button2.TabIndex = 214;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -96,40 +101,44 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(497, 453);
+            this.button1.Location = new System.Drawing.Point(331, 294);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 49);
+            this.button1.Size = new System.Drawing.Size(88, 32);
             this.button1.TabIndex = 213;
             this.button1.Text = "Change";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txt_oldpassword
             // 
             this.txt_oldpassword.BackColor = System.Drawing.SystemColors.Info;
             this.txt_oldpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_oldpassword.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_oldpassword.Location = new System.Drawing.Point(359, 118);
+            this.txt_oldpassword.Location = new System.Drawing.Point(239, 77);
+            this.txt_oldpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_oldpassword.Multiline = true;
             this.txt_oldpassword.Name = "txt_oldpassword";
             this.txt_oldpassword.PasswordChar = '*';
-            this.txt_oldpassword.Size = new System.Drawing.Size(400, 39);
+            this.txt_oldpassword.Size = new System.Drawing.Size(268, 27);
             this.txt_oldpassword.TabIndex = 212;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(66, 123);
+            this.label16.Location = new System.Drawing.Point(44, 80);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(202, 32);
+            this.label16.Size = new System.Drawing.Size(139, 24);
             this.label16.TabIndex = 211;
             this.label16.Text = "Old Password";
             // 
             // AdminChangePass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 697);
+            this.ClientSize = new System.Drawing.Size(698, 453);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_newpassword);
             this.Controls.Add(this.label2);
@@ -138,8 +147,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_oldpassword);
             this.Controls.Add(this.label16);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminChangePass";
             this.Text = "AdminChangePass";
+            this.Load += new System.EventHandler(this.AdminChangePass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
