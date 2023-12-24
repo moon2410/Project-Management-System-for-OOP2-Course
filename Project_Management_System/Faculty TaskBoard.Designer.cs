@@ -117,7 +117,7 @@
             // appliedStudentToolStripMenuItem
             // 
             this.appliedStudentToolStripMenuItem.Name = "appliedStudentToolStripMenuItem";
-            this.appliedStudentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.appliedStudentToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
             this.appliedStudentToolStripMenuItem.Text = "Applied Student";
             this.appliedStudentToolStripMenuItem.Click += new System.EventHandler(this.appliedStudentToolStripMenuItem_Click);
             // 
@@ -141,6 +141,7 @@
             this.button9.TabIndex = 222;
             this.button9.Text = "Update Task ";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // progressBar1
             // 
@@ -304,7 +305,7 @@
             // currentStudentToolStripMenuItem
             // 
             this.currentStudentToolStripMenuItem.Name = "currentStudentToolStripMenuItem";
-            this.currentStudentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.currentStudentToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
             this.currentStudentToolStripMenuItem.Text = "Current Student";
             this.currentStudentToolStripMenuItem.Click += new System.EventHandler(this.currentStudentToolStripMenuItem_Click);
             // 
@@ -454,7 +455,7 @@
             // removeStudentToolStripMenuItem
             // 
             this.removeStudentToolStripMenuItem.Name = "removeStudentToolStripMenuItem";
-            this.removeStudentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.removeStudentToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
             this.removeStudentToolStripMenuItem.Text = "Remove Student";
             this.removeStudentToolStripMenuItem.Click += new System.EventHandler(this.removeStudentToolStripMenuItem_Click);
             // 
@@ -495,7 +496,7 @@
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 

@@ -383,5 +383,12 @@ namespace Project_Management_System
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultyDashboard ads = new FacultyDashboard();
+            ads.Show();
+        }
     }
 }

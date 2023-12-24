@@ -121,5 +121,10 @@ namespace Project_Management_System
             facultyProfile ads = new facultyProfile();
             ads.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
