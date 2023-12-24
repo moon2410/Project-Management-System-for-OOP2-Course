@@ -64,6 +64,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label_CurrentAddress = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label_Department = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip_profile.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +74,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Azure;
             this.panel4.Location = new System.Drawing.Point(74, 569);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(89, 6);
             this.panel4.TabIndex = 8;
@@ -81,7 +83,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Azure;
             this.panel3.Location = new System.Drawing.Point(217, 429);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1027, 6);
             this.panel3.TabIndex = 23;
@@ -102,7 +104,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Location = new System.Drawing.Point(0, 188);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 6);
             this.panel2.TabIndex = 6;
@@ -155,7 +157,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.BackButton);
             this.panel1.Location = new System.Drawing.Point(8, -13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 692);
             this.panel1.TabIndex = 22;
@@ -254,7 +256,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
             this.panel5.Location = new System.Drawing.Point(229, 92);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1025, 6);
             this.panel5.TabIndex = 7;
@@ -263,7 +265,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.SteelBlue;
             this.panel6.Location = new System.Drawing.Point(731, 222);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(7, 260);
             this.panel6.TabIndex = 8;
@@ -426,7 +428,7 @@
             // 
             this.label_CurrentAddress.AutoSize = true;
             this.label_CurrentAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CurrentAddress.Location = new System.Drawing.Point(550, 501);
+            this.label_CurrentAddress.Location = new System.Drawing.Point(550, 538);
             this.label_CurrentAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CurrentAddress.Name = "label_CurrentAddress";
             this.label_CurrentAddress.Size = new System.Drawing.Size(65, 24);
@@ -437,18 +439,42 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(334, 497);
+            this.label2.Location = new System.Drawing.Point(334, 534);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 24);
             this.label2.TabIndex = 213;
             this.label2.Text = "Current Address      ";
             // 
+            // label_Department
+            // 
+            this.label_Department.AutoSize = true;
+            this.label_Department.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Department.Location = new System.Drawing.Point(550, 494);
+            this.label_Department.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_Department.Name = "label_Department";
+            this.label_Department.Size = new System.Drawing.Size(65, 24);
+            this.label_Department.TabIndex = 216;
+            this.label_Department.Text = "Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(334, 493);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 24);
+            this.label3.TabIndex = 215;
+            this.label3.Text = "Department          ";
+            // 
             // AdminAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1266, 669);
+            this.Controls.Add(this.label_Department);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label_CurrentAddress);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label_BirthDate);
@@ -469,7 +495,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.menuStrip_profile);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1283, 710);
             this.MinimumSize = new System.Drawing.Size(1282, 708);
@@ -524,5 +550,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label_CurrentAddress;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_Department;
+        private System.Windows.Forms.Label label3;
     }
 }
