@@ -296,5 +296,10 @@ namespace Project_Management_System
             Add_Project ads = new Add_Project(username);
             ads.Show();
         }
+
+        private void listView_projects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

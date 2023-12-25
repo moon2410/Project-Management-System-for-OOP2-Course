@@ -36,13 +36,13 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.menuStrip_profile = new System.Windows.Forms.MenuStrip();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,6 +160,17 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Faculty";
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Azure;
+            this.button6.Location = new System.Drawing.Point(71, 183);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(131, 32);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Create New Project";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.SkyBlue;
@@ -224,17 +235,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(218, 6);
             this.panel2.TabIndex = 6;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Azure;
-            this.button6.Location = new System.Drawing.Point(71, 183);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 32);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Create New Project";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // menuStrip_profile
             // 
@@ -378,6 +378,7 @@
             this.listView_projects.TabIndex = 176;
             this.listView_projects.UseCompatibleStateImageBehavior = false;
             this.listView_projects.View = System.Windows.Forms.View.Tile;
+            this.listView_projects.SelectedIndexChanged += new System.EventHandler(this.listView_projects_SelectedIndexChanged);
             // 
             // FacultyDashboard
             // 
