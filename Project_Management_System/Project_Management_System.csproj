@@ -67,6 +67,12 @@
     <Compile Include="Add Project.designer.cs">
       <DependentUpon>Add Project.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add To Do List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add To Do List.designer.cs">
+      <DependentUpon>Add To Do List.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,18 @@
     </Compile>
     <Compile Include="AdminMessageBox.Designer.cs">
       <DependentUpon>AdminMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit Project Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit Project Info.designer.cs">
+      <DependentUpon>Edit Project Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit To Do.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit To Do.designer.cs">
+      <DependentUpon>Edit To Do.cs</DependentUpon>
     </Compile>
     <Compile Include="Faculty TaskBoard.cs">
       <SubType>Form</SubType>
@@ -187,6 +205,12 @@
       <DependentUpon>PMSDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project Name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Name.designer.cs">
+      <DependentUpon>Project Name.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterPage.cs">
       <SubType>Form</SubType>
@@ -263,6 +287,9 @@
     <EmbeddedResource Include="Add Project.resx">
       <DependentUpon>Add Project.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add To Do List.resx">
+      <DependentUpon>Add To Do List.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminAccount.resx">
       <DependentUpon>AdminAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +307,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMessageBox.resx">
       <DependentUpon>AdminMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit Project Info.resx">
+      <DependentUpon>Edit Project Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit To Do.resx">
+      <DependentUpon>Edit To Do.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty TaskBoard.resx">
       <DependentUpon>Faculty TaskBoard.cs</DependentUpon>
@@ -319,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Name.resx">
+      <DependentUpon>Project Name.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

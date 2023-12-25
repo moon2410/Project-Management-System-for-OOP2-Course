@@ -42,9 +42,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.menuStrip_profile = new System.Windows.Forms.MenuStrip();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +59,8 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.listView_projects = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip_profile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +84,7 @@
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -96,7 +94,7 @@
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 692);
+            this.panel1.Size = new System.Drawing.Size(217, 692);
             this.panel1.TabIndex = 5;
             // 
             // button10
@@ -114,7 +112,7 @@
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.SkyBlue;
-            this.button11.Location = new System.Drawing.Point(89, 500);
+            this.button11.Location = new System.Drawing.Point(89, 514);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(87, 32);
             this.button11.TabIndex = 12;
@@ -125,7 +123,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Azure;
-            this.panel4.Location = new System.Drawing.Point(89, 244);
+            this.panel4.Location = new System.Drawing.Point(89, 258);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(89, 6);
@@ -134,7 +132,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.SkyBlue;
-            this.button7.Location = new System.Drawing.Point(89, 447);
+            this.button7.Location = new System.Drawing.Point(89, 461);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 32);
             this.button7.TabIndex = 11;
@@ -165,7 +163,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.SkyBlue;
-            this.button5.Location = new System.Drawing.Point(89, 392);
+            this.button5.Location = new System.Drawing.Point(89, 406);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(87, 32);
             this.button5.TabIndex = 9;
@@ -175,7 +173,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.SkyBlue;
-            this.button4.Location = new System.Drawing.Point(89, 331);
+            this.button4.Location = new System.Drawing.Point(89, 345);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 32);
             this.button4.TabIndex = 8;
@@ -186,7 +184,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.Location = new System.Drawing.Point(89, 271);
+            this.button3.Location = new System.Drawing.Point(89, 285);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 32);
             this.button3.TabIndex = 7;
@@ -199,7 +197,7 @@
             this.button2.BackColor = System.Drawing.Color.SkyBlue;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(89, 207);
+            this.button2.Location = new System.Drawing.Point(89, 221);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 32);
             this.button2.TabIndex = 6;
@@ -210,7 +208,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.Location = new System.Drawing.Point(89, 561);
+            this.button1.Location = new System.Drawing.Point(89, 575);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 32);
             this.button1.TabIndex = 5;
@@ -224,41 +222,19 @@
             this.panel2.Location = new System.Drawing.Point(0, 134);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 6);
+            this.panel2.Size = new System.Drawing.Size(218, 6);
             this.panel2.TabIndex = 6;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(286, 102);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(920, 274);
-            this.dataGridView2.TabIndex = 7;
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Azure;
-            this.button6.Location = new System.Drawing.Point(246, 55);
+            this.button6.Location = new System.Drawing.Point(71, 183);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(131, 32);
             this.button6.TabIndex = 11;
             this.button6.Text = "Create New Project";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Azure;
-            this.button9.Location = new System.Drawing.Point(681, 55);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(131, 32);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "Update Project";
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // menuStrip_profile
             // 
@@ -378,7 +354,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Azure;
-            this.panel5.Location = new System.Drawing.Point(232, 392);
+            this.panel5.Location = new System.Drawing.Point(237, 656);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1020, 6);
@@ -387,35 +363,32 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Azure;
-            this.panel6.Location = new System.Drawing.Point(237, 92);
+            this.panel6.Location = new System.Drawing.Point(237, 40);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1020, 6);
             this.panel6.TabIndex = 10;
             // 
-            // button8
+            // listView_projects
             // 
-            this.button8.BackColor = System.Drawing.Color.Azure;
-            this.button8.Location = new System.Drawing.Point(1075, 55);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(131, 32);
-            this.button8.TabIndex = 198;
-            this.button8.Text = "Delete Project";
-            this.button8.UseVisualStyleBackColor = false;
+            this.listView_projects.HideSelection = false;
+            this.listView_projects.Location = new System.Drawing.Point(237, 51);
+            this.listView_projects.Name = "listView_projects";
+            this.listView_projects.Size = new System.Drawing.Size(1012, 600);
+            this.listView_projects.TabIndex = 176;
+            this.listView_projects.UseCompatibleStateImageBehavior = false;
+            this.listView_projects.View = System.Windows.Forms.View.Tile;
             // 
             // FacultyDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1268, 675);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.listView_projects);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.menuStrip_profile);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1285, 716);
@@ -426,7 +399,6 @@
             this.Load += new System.EventHandler(this.FacultyDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.menuStrip_profile.ResumeLayout(false);
             this.menuStrip_profile.PerformLayout();
             this.ResumeLayout(false);
@@ -444,12 +416,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.MenuStrip menuStrip_profile;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
@@ -467,7 +437,7 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ListView listView_projects;
     }
 }
