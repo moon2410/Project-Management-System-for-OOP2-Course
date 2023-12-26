@@ -32,6 +32,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pMSDBDataSet = new Project_Management_System.PMSDBDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_addfaculty = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pMSDBDataSet = new Project_Management_System.PMSDBDataSet();
-            this.projectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projectsTableAdapter = new Project_Management_System.PMSDBDataSetTableAdapters.ProjectsTableAdapter();
             this.projectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projectdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,12 +69,12 @@
             this.user4usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user4nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user5usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user6nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.user5name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip_profile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -114,7 +114,7 @@
             this.user4usernameDataGridViewTextBoxColumn,
             this.user4nameDataGridViewTextBoxColumn,
             this.user5usernameDataGridViewTextBoxColumn,
-            this.user6nameDataGridViewTextBoxColumn});
+            this.user5name});
             this.dataGridView2.DataSource = this.projectsBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(292, 147);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
@@ -123,6 +123,16 @@
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(908, 454);
             this.dataGridView2.TabIndex = 17;
+            // 
+            // projectsBindingSource
+            // 
+            this.projectsBindingSource.DataMember = "Projects";
+            this.projectsBindingSource.DataSource = this.pMSDBDataSet;
+            // 
+            // pMSDBDataSet
+            // 
+            this.pMSDBDataSet.DataSetName = "PMSDBDataSet";
+            this.pMSDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -338,16 +348,6 @@
             this.logOutToolStripMenuItem.Text = "LogOut";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click_1);
             // 
-            // pMSDBDataSet
-            // 
-            this.pMSDBDataSet.DataSetName = "PMSDBDataSet";
-            this.pMSDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // projectsBindingSource
-            // 
-            this.projectsBindingSource.DataMember = "Projects";
-            this.projectsBindingSource.DataSource = this.pMSDBDataSet;
-            // 
             // projectsTableAdapter
             // 
             this.projectsTableAdapter.ClearBeforeFill = true;
@@ -432,11 +432,11 @@
             this.user5usernameDataGridViewTextBoxColumn.HeaderText = "user5username";
             this.user5usernameDataGridViewTextBoxColumn.Name = "user5usernameDataGridViewTextBoxColumn";
             // 
-            // user6nameDataGridViewTextBoxColumn
+            // user5name
             // 
-            this.user6nameDataGridViewTextBoxColumn.DataPropertyName = "user6name";
-            this.user6nameDataGridViewTextBoxColumn.HeaderText = "user6name";
-            this.user6nameDataGridViewTextBoxColumn.Name = "user6nameDataGridViewTextBoxColumn";
+            this.user5name.DataPropertyName = "user5name";
+            this.user5name.HeaderText = "user5name";
+            this.user5name.Name = "user5name";
             // 
             // AdminDashboard
             // 
@@ -459,12 +459,12 @@
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip_profile.ResumeLayout(false);
             this.menuStrip_profile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,6 +498,7 @@
         private PMSDBDataSet pMSDBDataSet;
         private System.Windows.Forms.BindingSource projectsBindingSource;
         private PMSDBDataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user6nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn projectDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn projectdescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn creationdateDataGridViewTextBoxColumn;
@@ -511,6 +512,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn user4usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user4nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user5usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user6nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user5name;
     }
 }
