@@ -31,9 +31,7 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -79,9 +77,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button6);
@@ -109,17 +105,6 @@
             this.button10.Text = "Uploaded Projects and Tasks";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.SkyBlue;
-            this.button11.Location = new System.Drawing.Point(89, 514);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(87, 32);
-            this.button11.TabIndex = 12;
-            this.button11.Text = "Groups";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Azure;
@@ -128,16 +113,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(89, 6);
             this.panel4.TabIndex = 8;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SkyBlue;
-            this.button7.Location = new System.Drawing.Point(89, 461);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(87, 32);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Applied Student List";
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -419,9 +394,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.MenuStrip menuStrip_profile;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;

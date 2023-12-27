@@ -14,7 +14,7 @@ namespace Models
             Connection cs = new Connection();
             SqlConnection con = cs.CreateConnection();
             int counter = 0;
-            String[] info = new String[15];
+            String[] info = new String[10];
             try
             {
 

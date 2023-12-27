@@ -115,12 +115,6 @@
     <Compile Include="Edit To Do.designer.cs">
       <DependentUpon>Edit To Do.cs</DependentUpon>
     </Compile>
-    <Compile Include="Faculty TaskBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Faculty TaskBoard.Designer.cs">
-      <DependentUpon>Faculty TaskBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="facultyAppliedStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Edit To Do.resx">
       <DependentUpon>Edit To Do.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Faculty TaskBoard.resx">
-      <DependentUpon>Faculty TaskBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="facultyAppliedStudent.resx">
       <DependentUpon>facultyAppliedStudent.cs</DependentUpon>

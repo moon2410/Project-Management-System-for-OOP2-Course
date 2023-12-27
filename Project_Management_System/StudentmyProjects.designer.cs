@@ -400,13 +400,12 @@
             // listView_projects
             // 
             this.listView_projects.HideSelection = false;
-            this.listView_projects.Location = new System.Drawing.Point(290, 140);
+            this.listView_projects.Location = new System.Drawing.Point(321, 128);
             this.listView_projects.Name = "listView_projects";
-            this.listView_projects.Size = new System.Drawing.Size(956, 493);
+            this.listView_projects.Size = new System.Drawing.Size(889, 534);
             this.listView_projects.TabIndex = 281;
             this.listView_projects.UseCompatibleStateImageBehavior = false;
             this.listView_projects.View = System.Windows.Forms.View.Tile;
-            this.listView_projects.SelectedIndexChanged += new System.EventHandler(this.listView_projects_SelectedIndexChanged);
             // 
             // StudentmyProjects
             // 
