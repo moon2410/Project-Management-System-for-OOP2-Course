@@ -30,6 +30,12 @@ namespace Controllers
             String[] info = sp.projectDisplay(username);
             return info;
         }
+        public string[] showingProjectfaculty(string username)
+        {
+            ShowProject sp = new ShowProject();
+            String[] info = sp.facultyprojectDisplay(username);
+            return info;
+        }
 
         public string[] showProjectInfo(string projectName)
         {
@@ -41,7 +47,7 @@ namespace Controllers
         public void editingProject(string[] info, string projectname)
         {
             EditProject ep = new EditProject();
-            ep.updateProject(projectname, info[1], info[2], info[3], info[4], info[5], info[6], info[7], info[0]);
+            ep.updateProject(projectname, info[1], info[2], info[3], info[4], info[5], info[6], info[7], info[8], info[9], info[10], info[11], info[12], info[13], info[14], info[0] );
 
             if (projectname != info[0])
             {

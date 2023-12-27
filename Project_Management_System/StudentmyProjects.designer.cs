@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentmyProjects));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblRole = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Fac_Lbl = new System.Windows.Forms.Label();
@@ -63,7 +62,7 @@
             this.facultyListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listView_projects = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -80,17 +79,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(255, 8);
             this.panel4.TabIndex = 197;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(308, 149);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(918, 484);
-            this.dataGridView1.TabIndex = 212;
             // 
             // lblRole
             // 
@@ -277,7 +265,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(966, 41);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(169, 24);
@@ -288,7 +276,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(582, 87);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 24);
             this.button1.TabIndex = 278;
@@ -312,7 +300,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(1139, 41);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 24);
             this.button2.TabIndex = 279;
@@ -409,12 +397,24 @@
             this.refreshToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
+            // listView_projects
+            // 
+            this.listView_projects.HideSelection = false;
+            this.listView_projects.Location = new System.Drawing.Point(290, 140);
+            this.listView_projects.Name = "listView_projects";
+            this.listView_projects.Size = new System.Drawing.Size(956, 493);
+            this.listView_projects.TabIndex = 281;
+            this.listView_projects.UseCompatibleStateImageBehavior = false;
+            this.listView_projects.View = System.Windows.Forms.View.Tile;
+            this.listView_projects.SelectedIndexChanged += new System.EventHandler(this.listView_projects_SelectedIndexChanged);
+            // 
             // StudentmyProjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1268, 675);
+            this.Controls.Add(this.listView_projects);
             this.Controls.Add(this.menuStrip_profile);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -422,7 +422,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblRole);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Fac_Lbl);
@@ -439,7 +438,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1285, 716);
             this.MinimumSize = new System.Drawing.Size(1284, 714);
@@ -447,7 +446,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student";
             this.Load += new System.EventHandler(this.StudentmyProjects_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -464,7 +462,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Fac_Lbl;
@@ -497,5 +494,6 @@
         private System.Windows.Forms.ToolStripMenuItem facultyListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ListView listView_projects;
     }
 }

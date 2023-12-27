@@ -373,7 +373,7 @@ namespace Project_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FacultyDashboard ads = new FacultyDashboard();
+            FacultyDashboard ads = new FacultyDashboard(Username);
             ads.Show();
         }
     }

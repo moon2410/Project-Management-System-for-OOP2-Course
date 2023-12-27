@@ -24,6 +24,8 @@ namespace Project_Management_System
 
         public Add_To_Do_List(string[] info)
         {
+            //this.username = username;
+            //this.name = name;
             this.info = info;
             InitializeComponent();
         }

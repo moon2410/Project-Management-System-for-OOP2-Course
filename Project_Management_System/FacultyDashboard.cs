@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -254,13 +255,25 @@ namespace Project_Management_System
 
         private void FacultyDashboard_Load(object sender, EventArgs e)
         {
+            Projects pj = new Projects();
+            String[] info = pj.showingProjectfaculty(username);
+            int n = 0;
+            int length = info.Length;
+
+            if (info != null && info.Length > 0)
+            {
+
+                for (int i = 0; i < length; i++)
+                {
+                    lbl[i].Text = info[i];
+                    lbl[i].Location = new Point(10, n);
+                    lbl[i].Size = new System.Drawing.Size(300, 30);
+                    listView_projects.Controls.Add(lbl[i]);
 
 
-
-
-
-
-
+                    n = n + 40;
+                }
+            }
 
         }
 

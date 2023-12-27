@@ -72,13 +72,22 @@ namespace Models
             SqlConnection con = cs.CreateConnection();
 
             int rows = 0;
+            try
+            {
+                String query = "select * from " + tablename + "";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                rows = dt.Rows.Count;
 
-            String query = "select * from " + tablename + "";
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            rows = dt.Rows.Count;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
             return rows;
         }

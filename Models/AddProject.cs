@@ -70,7 +70,8 @@ namespace Models
                             + "username varchar(255),"
                             + "name varchar(255),"
                             + "assaignedwork varchar(255),"
-                            + "duedate varchar(255))";
+                            + "duedate varchar(255),"
+                            + "status varchar(255))";
 
                 SqlCommand cmd = new SqlCommand(quary, con);
                 cmd.ExecuteNonQuery();

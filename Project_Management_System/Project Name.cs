@@ -16,7 +16,7 @@ namespace Project_Management_System
     {
         String username="";
         String projectname = "";
-        String[] info = new String[8];
+        String[] info = new String[15];
         //Label[] check = new Label[100];
         LinkLabel[] lbl_edit = new LinkLabel[100];
         MyReturnType information;
@@ -61,17 +61,26 @@ namespace Project_Management_System
             info = pj.showProjectInfo(projectname);
             label_projectname.Text = info[0];
             label_projectdescrip.Text = info[1];
-            if (!info[3].Equals(""))
+            projectCreator_lbl.Text = info[2];
+            if (!info[6].Equals(""))
             {
-                label_collab1.Text = info[3];
+                colab_lbl1.Text = info[6];
             }
-            if (!info[5].Equals(""))
+            if (!info[8].Equals(""))
             {
-                label_collab2.Text = info[5];
+                colab_lbl2.Text = info[8];
             }
-            if (!info[7].Equals(""))
+            if (!info[10].Equals(""))
             {
-                label_collab3.Text = info[7];
+                colab_lbl3.Text = info[10];
+            }
+            if (!info[12].Equals(""))
+            {
+                colab_lbl4.Text = info[12];
+            }
+            if (!info[14].Equals(""))
+            {
+                colab_lbl5.Text = info[14];
             }
 
             //To Do List
@@ -124,8 +133,8 @@ namespace Project_Management_System
                     lbl_edit[i].Size = new System.Drawing.Size(lbl_edit[i].Right, 12);
                     listView_todolist.Controls.Add(lbl_edit[i]);
 
-                    n += 40;
-                    j += 40;
+                    n += 20;
+                    j += 20;
 
                 }
             }

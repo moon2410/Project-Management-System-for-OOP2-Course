@@ -45,13 +45,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel_addpeople = new System.Windows.Forms.Panel();
             this.button_edit = new System.Windows.Forms.Button();
+            this.linkLabel_remove5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_remove4 = new System.Windows.Forms.LinkLabel();
+            this.label_colab5 = new System.Windows.Forms.Label();
+            this.label_colab4 = new System.Windows.Forms.Label();
             this.panel_addpeople.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 57);
+            this.label1.Location = new System.Drawing.Point(37, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 90);
+            this.label2.Location = new System.Drawing.Point(37, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 187);
+            this.label3.Location = new System.Drawing.Point(39, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 2;
@@ -77,14 +81,14 @@
             // 
             // textBox_name
             // 
-            this.textBox_name.Location = new System.Drawing.Point(161, 54);
+            this.textBox_name.Location = new System.Drawing.Point(161, 27);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(207, 20);
             this.textBox_name.TabIndex = 3;
             // 
             // richTextBox_description
             // 
-            this.richTextBox_description.Location = new System.Drawing.Point(161, 87);
+            this.richTextBox_description.Location = new System.Drawing.Point(161, 60);
             this.richTextBox_description.Name = "richTextBox_description";
             this.richTextBox_description.Size = new System.Drawing.Size(207, 78);
             this.richTextBox_description.TabIndex = 4;
@@ -93,7 +97,7 @@
             // label_colab1
             // 
             this.label_colab1.AutoSize = true;
-            this.label_colab1.Location = new System.Drawing.Point(158, 187);
+            this.label_colab1.Location = new System.Drawing.Point(160, 153);
             this.label_colab1.Name = "label_colab1";
             this.label_colab1.Size = new System.Drawing.Size(35, 13);
             this.label_colab1.TabIndex = 5;
@@ -102,7 +106,7 @@
             // label_colab2
             // 
             this.label_colab2.AutoSize = true;
-            this.label_colab2.Location = new System.Drawing.Point(158, 223);
+            this.label_colab2.Location = new System.Drawing.Point(160, 189);
             this.label_colab2.Name = "label_colab2";
             this.label_colab2.Size = new System.Drawing.Size(35, 13);
             this.label_colab2.TabIndex = 6;
@@ -111,7 +115,7 @@
             // label_colab3
             // 
             this.label_colab3.AutoSize = true;
-            this.label_colab3.Location = new System.Drawing.Point(158, 265);
+            this.label_colab3.Location = new System.Drawing.Point(160, 226);
             this.label_colab3.Name = "label_colab3";
             this.label_colab3.Size = new System.Drawing.Size(35, 13);
             this.label_colab3.TabIndex = 7;
@@ -122,7 +126,7 @@
             this.linkLabel_remove1.AutoSize = true;
             this.linkLabel_remove1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel_remove1.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabel_remove1.Location = new System.Drawing.Point(199, 187);
+            this.linkLabel_remove1.Location = new System.Drawing.Point(201, 153);
             this.linkLabel_remove1.Name = "linkLabel_remove1";
             this.linkLabel_remove1.Size = new System.Drawing.Size(47, 13);
             this.linkLabel_remove1.TabIndex = 8;
@@ -135,7 +139,7 @@
             this.linkLabel_remove2.AutoSize = true;
             this.linkLabel_remove2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel_remove2.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabel_remove2.Location = new System.Drawing.Point(199, 223);
+            this.linkLabel_remove2.Location = new System.Drawing.Point(201, 189);
             this.linkLabel_remove2.Name = "linkLabel_remove2";
             this.linkLabel_remove2.Size = new System.Drawing.Size(47, 13);
             this.linkLabel_remove2.TabIndex = 9;
@@ -148,7 +152,7 @@
             this.linkLabel_remove3.AutoSize = true;
             this.linkLabel_remove3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel_remove3.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabel_remove3.Location = new System.Drawing.Point(199, 265);
+            this.linkLabel_remove3.Location = new System.Drawing.Point(201, 226);
             this.linkLabel_remove3.Name = "linkLabel_remove3";
             this.linkLabel_remove3.Size = new System.Drawing.Size(47, 13);
             this.linkLabel_remove3.TabIndex = 10;
@@ -168,6 +172,7 @@
             // 
             // listView_search
             // 
+            this.listView_search.HideSelection = false;
             this.listView_search.Location = new System.Drawing.Point(35, 49);
             this.listView_search.Name = "listView_search";
             this.listView_search.Size = new System.Drawing.Size(294, 206);
@@ -211,11 +216,59 @@
             this.button_edit.UseVisualStyleBackColor = true;
             this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
+            // linkLabel_remove5
+            // 
+            this.linkLabel_remove5.AutoSize = true;
+            this.linkLabel_remove5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel_remove5.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel_remove5.Location = new System.Drawing.Point(201, 302);
+            this.linkLabel_remove5.Name = "linkLabel_remove5";
+            this.linkLabel_remove5.Size = new System.Drawing.Size(47, 13);
+            this.linkLabel_remove5.TabIndex = 21;
+            this.linkLabel_remove5.TabStop = true;
+            this.linkLabel_remove5.Text = "Remove";
+            this.linkLabel_remove5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_remove5_LinkClicked_1);
+            // 
+            // linkLabel_remove4
+            // 
+            this.linkLabel_remove4.AutoSize = true;
+            this.linkLabel_remove4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel_remove4.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabel_remove4.Location = new System.Drawing.Point(201, 260);
+            this.linkLabel_remove4.Name = "linkLabel_remove4";
+            this.linkLabel_remove4.Size = new System.Drawing.Size(47, 13);
+            this.linkLabel_remove4.TabIndex = 20;
+            this.linkLabel_remove4.TabStop = true;
+            this.linkLabel_remove4.Text = "Remove";
+            this.linkLabel_remove4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_remove4_LinkClicked_1);
+            // 
+            // label_colab5
+            // 
+            this.label_colab5.AutoSize = true;
+            this.label_colab5.Location = new System.Drawing.Point(160, 302);
+            this.label_colab5.Name = "label_colab5";
+            this.label_colab5.Size = new System.Drawing.Size(35, 13);
+            this.label_colab5.TabIndex = 19;
+            this.label_colab5.Text = "label4";
+            // 
+            // label_colab4
+            // 
+            this.label_colab4.AutoSize = true;
+            this.label_colab4.Location = new System.Drawing.Point(160, 260);
+            this.label_colab4.Name = "label_colab4";
+            this.label_colab4.Size = new System.Drawing.Size(35, 13);
+            this.label_colab4.TabIndex = 18;
+            this.label_colab4.Text = "label4";
+            // 
             // Edit_Project_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 611);
+            this.Controls.Add(this.linkLabel_remove5);
+            this.Controls.Add(this.linkLabel_remove4);
+            this.Controls.Add(this.label_colab5);
+            this.Controls.Add(this.label_colab4);
             this.Controls.Add(this.button_edit);
             this.Controls.Add(this.panel_addpeople);
             this.Controls.Add(this.linkLabel_remove3);
@@ -259,5 +312,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel_addpeople;
         private System.Windows.Forms.Button button_edit;
+        private System.Windows.Forms.LinkLabel linkLabel_remove5;
+        private System.Windows.Forms.LinkLabel linkLabel_remove4;
+        private System.Windows.Forms.Label label_colab5;
+        private System.Windows.Forms.Label label_colab4;
     }
 }
