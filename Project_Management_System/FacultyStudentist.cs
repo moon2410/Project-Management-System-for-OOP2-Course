@@ -33,7 +33,9 @@ namespace Project_Management_System
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            LoginPage abs = new LoginPage();
+            abs.Show();
         }
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -100,7 +102,7 @@ namespace Project_Management_System
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FacultyFacultyList ads = new FacultyFacultyList();  
+            FacultyFacultyList ads = new FacultyFacultyList(username);  
             ads.Show();
         }
 
