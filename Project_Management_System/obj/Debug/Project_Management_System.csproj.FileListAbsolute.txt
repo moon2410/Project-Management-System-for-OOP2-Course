@@ -41,7 +41,6 @@ D:\repos\Project_Management_System\obj\Debug\Project_Management_System.RemoveStu
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.StudentProjectSubmit.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminAddFaculty.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminChangePass.resources
-D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminMessageBox.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyEditProject.resources
 D:\Repos\Project_Management_System\bin\Debug\PMSDB.mdf
 D:\Repos\Project_Management_System\bin\Debug\PMSDB_log.ldf

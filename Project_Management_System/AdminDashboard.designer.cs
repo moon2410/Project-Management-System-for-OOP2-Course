@@ -41,7 +41,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_facultylist = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -56,20 +55,16 @@
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectsTableAdapter = new Project_Management_System.PMSDBDataSetTableAdapters.ProjectsTableAdapter();
-            this.projectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projectdescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Project = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creationdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.completationdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user1usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user1nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user2usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user2nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user3usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user3nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user4usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user4nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user5usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user5name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).BeginInit();
@@ -101,22 +96,18 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.projectDataGridViewTextBoxColumn,
-            this.projectdescriptionDataGridViewTextBoxColumn,
+            this.Project,
+            this.ProjectDescription,
+            this.ProjectCreator,
             this.creationdateDataGridViewTextBoxColumn,
-            this.completationdateDataGridViewTextBoxColumn,
             this.user1usernameDataGridViewTextBoxColumn,
             this.user1nameDataGridViewTextBoxColumn,
             this.user2usernameDataGridViewTextBoxColumn,
             this.user2nameDataGridViewTextBoxColumn,
             this.user3usernameDataGridViewTextBoxColumn,
-            this.user3nameDataGridViewTextBoxColumn,
-            this.user4usernameDataGridViewTextBoxColumn,
-            this.user4nameDataGridViewTextBoxColumn,
-            this.user5usernameDataGridViewTextBoxColumn,
-            this.user5name});
+            this.user3nameDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.projectsBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(292, 147);
+            this.dataGridView2.Location = new System.Drawing.Point(298, 149);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
@@ -193,7 +184,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.Controls.Add(this.btn_facultylist);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
@@ -217,17 +207,6 @@
             this.btn_facultylist.Text = "Faculty List";
             this.btn_facultylist.UseVisualStyleBackColor = false;
             this.btn_facultylist.Click += new System.EventHandler(this.btn_facultylist_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.Location = new System.Drawing.Point(74, 439);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 32);
-            this.button3.TabIndex = 282;
-            this.button3.Text = "MessageBox";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // BackButton
             // 
@@ -352,31 +331,29 @@
             // 
             this.projectsTableAdapter.ClearBeforeFill = true;
             // 
-            // projectDataGridViewTextBoxColumn
+            // Project
             // 
-            this.projectDataGridViewTextBoxColumn.DataPropertyName = "project";
-            this.projectDataGridViewTextBoxColumn.HeaderText = "project";
-            this.projectDataGridViewTextBoxColumn.Name = "projectDataGridViewTextBoxColumn";
-            this.projectDataGridViewTextBoxColumn.Width = 200;
+            this.Project.DataPropertyName = "Project";
+            this.Project.HeaderText = "Project";
+            this.Project.Name = "Project";
             // 
-            // projectdescriptionDataGridViewTextBoxColumn
+            // ProjectDescription
             // 
-            this.projectdescriptionDataGridViewTextBoxColumn.DataPropertyName = "projectdescription";
-            this.projectdescriptionDataGridViewTextBoxColumn.HeaderText = "projectdescription";
-            this.projectdescriptionDataGridViewTextBoxColumn.Name = "projectdescriptionDataGridViewTextBoxColumn";
-            this.projectdescriptionDataGridViewTextBoxColumn.Width = 450;
+            this.ProjectDescription.DataPropertyName = "ProjectDescription";
+            this.ProjectDescription.HeaderText = "ProjectDescription";
+            this.ProjectDescription.Name = "ProjectDescription";
+            // 
+            // ProjectCreator
+            // 
+            this.ProjectCreator.DataPropertyName = "ProjectCreator";
+            this.ProjectCreator.HeaderText = "ProjectCreator";
+            this.ProjectCreator.Name = "ProjectCreator";
             // 
             // creationdateDataGridViewTextBoxColumn
             // 
             this.creationdateDataGridViewTextBoxColumn.DataPropertyName = "Creationdate";
             this.creationdateDataGridViewTextBoxColumn.HeaderText = "Creationdate";
             this.creationdateDataGridViewTextBoxColumn.Name = "creationdateDataGridViewTextBoxColumn";
-            // 
-            // completationdateDataGridViewTextBoxColumn
-            // 
-            this.completationdateDataGridViewTextBoxColumn.DataPropertyName = "Completationdate";
-            this.completationdateDataGridViewTextBoxColumn.HeaderText = "Completationdate";
-            this.completationdateDataGridViewTextBoxColumn.Name = "completationdateDataGridViewTextBoxColumn";
             // 
             // user1usernameDataGridViewTextBoxColumn
             // 
@@ -413,30 +390,6 @@
             this.user3nameDataGridViewTextBoxColumn.DataPropertyName = "user3name";
             this.user3nameDataGridViewTextBoxColumn.HeaderText = "user3name";
             this.user3nameDataGridViewTextBoxColumn.Name = "user3nameDataGridViewTextBoxColumn";
-            // 
-            // user4usernameDataGridViewTextBoxColumn
-            // 
-            this.user4usernameDataGridViewTextBoxColumn.DataPropertyName = "user4username";
-            this.user4usernameDataGridViewTextBoxColumn.HeaderText = "user4username";
-            this.user4usernameDataGridViewTextBoxColumn.Name = "user4usernameDataGridViewTextBoxColumn";
-            // 
-            // user4nameDataGridViewTextBoxColumn
-            // 
-            this.user4nameDataGridViewTextBoxColumn.DataPropertyName = "user4name";
-            this.user4nameDataGridViewTextBoxColumn.HeaderText = "user4name";
-            this.user4nameDataGridViewTextBoxColumn.Name = "user4nameDataGridViewTextBoxColumn";
-            // 
-            // user5usernameDataGridViewTextBoxColumn
-            // 
-            this.user5usernameDataGridViewTextBoxColumn.DataPropertyName = "user5username";
-            this.user5usernameDataGridViewTextBoxColumn.HeaderText = "user5username";
-            this.user5usernameDataGridViewTextBoxColumn.Name = "user5usernameDataGridViewTextBoxColumn";
-            // 
-            // user5name
-            // 
-            this.user5name.DataPropertyName = "user5name";
-            this.user5name.HeaderText = "user5name";
-            this.user5name.Name = "user5name";
             // 
             // AdminDashboard
             // 
@@ -491,7 +444,6 @@
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_facultylist;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
@@ -501,17 +453,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn user6nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn projectDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn projectdescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creationdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn completationdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user4usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user4nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user5usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Project;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectCreator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn creationdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user1usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user1nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user2usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user2nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user3usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user3nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user4usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user4nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user5usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user5name;
     }
 }

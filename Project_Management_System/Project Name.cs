@@ -16,7 +16,7 @@ namespace Project_Management_System
     {
         String username="";
         String projectname = "";
-        String[] info = new String[15];
+        String[] info = new String[10];
         //Label[] check = new Label[100];
         LinkLabel[] lbl_edit = new LinkLabel[100];
         MyReturnType information;
@@ -62,26 +62,19 @@ namespace Project_Management_System
             label_projectname.Text = info[0];
             label_projectdescrip.Text = info[1];
             projectCreator_lbl.Text = info[2];
-            if (!info[6].Equals(""))
+            if (!info[5].Equals(""))
             {
-                colab_lbl1.Text = info[6];
+                colab_lbl1.Text = info[5];
             }
-            if (!info[8].Equals(""))
+            if (!info[7].Equals(""))
             {
-                colab_lbl2.Text = info[8];
+                colab_lbl2.Text = info[7];
             }
-            if (!info[10].Equals(""))
+            if (!info[9].Equals(""))
             {
-                colab_lbl3.Text = info[10];
+                colab_lbl3.Text = info[9];
             }
-            if (!info[12].Equals(""))
-            {
-                colab_lbl4.Text = info[12];
-            }
-            if (!info[14].Equals(""))
-            {
-                colab_lbl5.Text = info[14];
-            }
+            
 
             //To Do List
             ToDoList td = new ToDoList();
@@ -231,6 +224,11 @@ namespace Project_Management_System
         private void lbl15Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void colab_lbl2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

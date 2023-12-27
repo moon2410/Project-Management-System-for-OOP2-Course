@@ -188,13 +188,6 @@ namespace Project_Management_System
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AdminMessageBox adminMessageBox = new AdminMessageBox(username);
-            adminMessageBox.Show();
-        }
-
         private void btn_facultylist_Click(object sender, EventArgs e)
         {
             this.Hide();

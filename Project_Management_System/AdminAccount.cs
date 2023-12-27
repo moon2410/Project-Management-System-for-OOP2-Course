@@ -140,12 +140,6 @@ namespace Project_Management_System
             adminAccount.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AdminMessageBox adminMessageBox = new AdminMessageBox(username);
-            adminMessageBox.Show();
-        }
 
         private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
         {

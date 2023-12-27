@@ -41,8 +41,6 @@
             this.colab_lbl1 = new System.Windows.Forms.Label();
             this.colab_lbl2 = new System.Windows.Forms.Label();
             this.colab_lbl3 = new System.Windows.Forms.Label();
-            this.colab_lbl4 = new System.Windows.Forms.Label();
-            this.colab_lbl5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.projectCreator_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -158,6 +156,7 @@
             this.colab_lbl2.Size = new System.Drawing.Size(21, 20);
             this.colab_lbl2.TabIndex = 13;
             this.colab_lbl2.Text = "...";
+            this.colab_lbl2.Click += new System.EventHandler(this.colab_lbl2_Click);
             // 
             // colab_lbl3
             // 
@@ -168,26 +167,6 @@
             this.colab_lbl3.Size = new System.Drawing.Size(21, 20);
             this.colab_lbl3.TabIndex = 14;
             this.colab_lbl3.Text = "...";
-            // 
-            // colab_lbl4
-            // 
-            this.colab_lbl4.AutoSize = true;
-            this.colab_lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colab_lbl4.Location = new System.Drawing.Point(195, 259);
-            this.colab_lbl4.Name = "colab_lbl4";
-            this.colab_lbl4.Size = new System.Drawing.Size(21, 20);
-            this.colab_lbl4.TabIndex = 15;
-            this.colab_lbl4.Text = "...";
-            // 
-            // colab_lbl5
-            // 
-            this.colab_lbl5.AutoSize = true;
-            this.colab_lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colab_lbl5.Location = new System.Drawing.Point(195, 297);
-            this.colab_lbl5.Name = "colab_lbl5";
-            this.colab_lbl5.Size = new System.Drawing.Size(21, 20);
-            this.colab_lbl5.TabIndex = 16;
-            this.colab_lbl5.Text = "...";
             // 
             // label4
             // 
@@ -216,8 +195,6 @@
             this.ClientSize = new System.Drawing.Size(617, 537);
             this.Controls.Add(this.projectCreator_lbl);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.colab_lbl5);
-            this.Controls.Add(this.colab_lbl4);
             this.Controls.Add(this.colab_lbl3);
             this.Controls.Add(this.colab_lbl2);
             this.Controls.Add(this.colab_lbl1);
@@ -254,8 +231,6 @@
         private System.Windows.Forms.Label colab_lbl1;
         private System.Windows.Forms.Label colab_lbl2;
         private System.Windows.Forms.Label colab_lbl3;
-        private System.Windows.Forms.Label colab_lbl4;
-        private System.Windows.Forms.Label colab_lbl5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label projectCreator_lbl;
     }

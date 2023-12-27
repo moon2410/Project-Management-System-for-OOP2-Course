@@ -51,26 +51,7 @@ namespace Models
                         info[counter++] = reader2["Project"].ToString();
                     }
                 }
-                //4th person
-                quary = "select * from Projects where user4username='" + username + "'";
-                cmd = new SqlCommand(quary, con);
-                using (SqlDataReader reader2 = cmd.ExecuteReader())
-                {
-                    while (reader2.Read())
-                    {
-                        info[counter++] = reader2["Project"].ToString();
-                    }
-                }
-                //5th person
-                quary = "select * from Projects where user5username='" + username + "'";
-                cmd = new SqlCommand(quary, con);
-                using (SqlDataReader reader2 = cmd.ExecuteReader())
-                {
-                    while (reader2.Read())
-                    {
-                        info[counter++] = reader2["Project"].ToString();
-                    }
-                }
+                
             }
             catch (Exception ex)
             {

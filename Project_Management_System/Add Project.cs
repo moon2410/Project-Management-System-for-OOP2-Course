@@ -111,17 +111,13 @@ namespace Project_Management_System
                     String name2 = name[counter[j++]];
                     String username3 = uname[counter[j]];
                     String name3 = name[counter[j++]];
-                    String username4 = uname[counter[j]];
-                    String name4 = name[counter[j++]];
-                    String username5 = uname[counter[j]];
-                    String name5 = name[counter[j++]];
                     if (username1.Equals(""))
                     {
                         MessageBox.Show("Please Assign Atleast one people in the project!!!");
                     }
                     else
                     {
-                        pj.addingProject(table,textBox_projectname.Text, richTextBox_projectdescription.Text, Username, dateTimePicker2.Text, dateTimePicker1.Text, username1, name1, username2, name2, username3, name3, username4, name4, username5, name5);
+                        pj.addingProject(table,textBox_projectname.Text, richTextBox_projectdescription.Text, Username, dateTimePicker2.Text, username1, name1, username2, name2, username3, name3);
                     }
                 }
         }
@@ -130,7 +126,7 @@ namespace Project_Management_System
 
         private void lbl15Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
                 listView_assaignedpeople.Controls.Add(lbl[14]);
                 counter[test++] = 14;
@@ -138,13 +134,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl14Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[13]);
@@ -153,13 +149,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl13Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
                 listView_assaignedpeople.Controls.Add(lbl[12]);
                 counter[test++] = 12;
@@ -167,13 +163,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl12Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[11]);
@@ -182,13 +178,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl11Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[10]);
@@ -197,13 +193,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl10Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[9]);
@@ -212,13 +208,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl9Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[8]);
@@ -227,13 +223,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl8Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[7]);
@@ -242,13 +238,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl7Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[6]);
@@ -257,13 +253,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl6Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[5]);
@@ -272,13 +268,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl5Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[4]);
@@ -287,13 +283,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl4Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
                 listView_assaignedpeople.Controls.Add(lbl[3]);
                 counter[test++] = 3;
@@ -301,13 +297,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl3Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[2]);
@@ -316,13 +312,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl2Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[1]);
@@ -331,13 +327,13 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 
         private void lbl1Click(object sender, EventArgs e)
         {
-            if (listView_assaignedpeople.Controls.Count<5)
+            if (listView_assaignedpeople.Controls.Count < 3)
             {
 
                 listView_assaignedpeople.Controls.Add(lbl[0]);
@@ -346,7 +342,7 @@ namespace Project_Management_System
 
             else
             {
-                MessageBox.Show("No. of people maximum for a project is 5!!!");
+                MessageBox.Show("No. of people maximum for a project is 3!!!");
             }
         }
 

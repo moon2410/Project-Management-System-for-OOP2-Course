@@ -122,18 +122,17 @@ namespace Project_Management_System
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AdminMessageBox adminMessageBox = new AdminMessageBox(username);
-            adminMessageBox.Show();
-        }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             AdminChangePass adminChangePass = new AdminChangePass(username);
             adminChangePass.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

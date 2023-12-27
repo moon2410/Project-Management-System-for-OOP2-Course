@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controllers;
 
+
 namespace Project_Management_System
 {
     public partial class Edit_Project_Info : Form
     {
-        String[] info = new String[15];
+        String[] info = new String[10];
         String[] name = new String[20];
         String[] uname = new String[20];
         LinkLabel[] lbl = new LinkLabel[100];
@@ -61,29 +62,20 @@ namespace Project_Management_System
 
             textBox_name.Text = info[0];
             richTextBox_description.Text = info[1];
-            if (!info[6].Equals(""))
+            if (!info[5].Equals(""))
             {
-                label_colab1.Text = info[6];
+                label_colab1.Text = info[5];
                 linkLabel_remove1.Left = label_colab1.Right+10;
             }
-            if (!info[8].Equals(""))
+            if (!info[7].Equals(""))
             {
-                label_colab2.Text = info[8];
+                label_colab2.Text = info[7];
                 linkLabel_remove2.Left = label_colab2.Right + 10;
             }
-            if (!info[10].Equals(""))
+            if (!info[9].Equals(""))
             {
-                label_colab3.Text = info[10];
+                label_colab3.Text = info[9];
                 linkLabel_remove3.Left = label_colab3.Right + 10;
-            }if (!info[12].Equals(""))
-            {
-                label_colab2.Text = info[12];
-                linkLabel_remove4.Left = label_colab4.Right + 10;
-            }
-            if (!info[14].Equals(""))
-            {
-                label_colab3.Text = info[14];
-                linkLabel_remove5.Left = label_colab5.Right + 10;
             }
         }
 
@@ -104,17 +96,15 @@ namespace Project_Management_System
 
                 label_colab1.Text = label_colab2.Text;
                 label_colab2.Text = label_colab3.Text;
-                label_colab3.Text = label_colab4.Text;
-                label_colab4.Text = label_colab5.Text;
-                label_colab5.Text = "";
+                label_colab3.Text = "";
                 linkLabel_remove3.Visible = false;
-                for (int i = 5; i <= 12; i++)
+                for (int i = 4; i <= 7; i++)
                 {
                     info[i] = info[i + 2];
                 }
 
-                info[13] = "";
-                info[14] = "";
+                info[8] = "";
+                info[9] = "";
             }
         }
 
@@ -128,18 +118,16 @@ namespace Project_Management_System
                 label_colab2.Text = label_colab3.Text;
                 if (label_colab3.Text.Equals(""))
                     linkLabel_remove2.Visible = false;
-                
-                label_colab3.Text = label_colab4.Text;
-                label_colab4.Text = label_colab5.Text;
-                label_colab5.Text = "";
+
+                label_colab3.Text = "";
                 linkLabel_remove3.Visible = false;
-                for (int i = 7; i <= 12; i++)
+                for (int i = 4; i <= 5; i++)
                 {
                     info[i] = info[i + 2];
                 }
 
-                info[13] = "";
-                info[14] = "";
+                info[8] = "";
+                info[9] = "";
             }
         }
 
@@ -149,68 +137,12 @@ namespace Project_Management_System
             if (dr == DialogResult.Yes)
             {
                 panel_addpeople.Visible = true;
-
-                label_colab3.Text = label_colab4.Text;
-                if (label_colab3.Text.Equals(""))
-                    linkLabel_remove4.Visible = false;
-
-                label_colab4.Text = label_colab5.Text;
-                label_colab5.Text = "";
+                label_colab3.Text = "";
                 linkLabel_remove3.Visible = false;
-                for (int i = 9; i <= 12; i++)
-                {
-                    info[i] = info[i + 2];
-                }
-
-                info[13] = "";
-                info[14] = "";
-            }
-
-
-
-
-
-            
-        }
-
-        private void linkLabel_remove4_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Are you sure to remove " + label_colab4.Text + " ?", "Confirmation", MessageBoxButtons.YesNo);
-            if (dr == DialogResult.Yes)
-            {
-                panel_addpeople.Visible = true;
-
-                label_colab4.Text = label_colab5.Text;
-                if (label_colab3.Text.Equals(""))
-                    linkLabel_remove4.Visible = false;
-
-                label_colab5.Text = "";
-                linkLabel_remove3.Visible = false;
-                for (int i = 4; i <= 5; i++)
-                {
-                    info[i] = info[i + 2];
-                }
-
-                info[13] = "";
-                info[14] = "";
+                info[8] = "";
+                info[9] = "";
             }
         }
-
-        private void linkLabel_remove5_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Are you sure to remove " + label_colab5.Text + " ?", "Confirmation", MessageBoxButtons.YesNo);
-            if (dr == DialogResult.Yes)
-            {
-                panel_addpeople.Visible = true;
-                label_colab5.Text = "";
-                linkLabel_remove3.Visible = false;
-                info[13] = "";
-                info[14] = "";
-            }
-
-        }
-
-        
 
         private void button_search_Click(object sender, EventArgs e)
         {
@@ -244,58 +176,40 @@ namespace Project_Management_System
 
         private void lbl1Click(object sender, EventArgs e)
         {
-            int a = 0;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            if (label_colab1.Text.Equals(name[0]) || label_colab2.Text.Equals(name[0]) || label_colab3.Equals(name[0]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[0] + " " + "is already at the project!!!");
             }
 
             else
             {
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
+                    info[2] = uname[0];
+                    info[3] = name[0];
+                    label_colab1.Text = name[0];
                     linkLabel_remove1.Left = label_colab1.Right + 10;
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[0]);
 
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[0];
+                    info[5] = name[0];
+                    label_colab2.Text = name[0];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[0]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[0];
+                    info[7] = name[0];
+                    label_colab3.Text = name[0];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[0]);
                 }
                 else
                 {
@@ -307,59 +221,40 @@ namespace Project_Management_System
 
         private void lbl2Click(object sender, EventArgs e)
         {
-            int a = 1;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            if (label_colab1.Text.Equals(name[1]) || label_colab2.Text.Equals(name[1]) || label_colab3.Equals(name[1]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[1] + " " + "is already at the project!!!");
             }
 
             else
             {
+
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[1];
+                    info[3] = name[1];
+                    label_colab1.Text = name[1];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[1]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[1];
+                    info[5] = name[1];
+                    label_colab2.Text = name[1];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[1]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[1];
+                    info[7] = name[1];
+                    label_colab3.Text = name[1];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[1]);
                 }
                 else
                 {
@@ -370,60 +265,41 @@ namespace Project_Management_System
 
         private void lbl3Click(object sender, EventArgs e)
         {
-
-            int a = 2;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[2]) || label_colab2.Text.Equals(name[2]) || label_colab3.Equals(name[2]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[2] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[2];
+                    info[3] = name[2];
+                    label_colab1.Text = name[2];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[2]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[2];
+                    info[5] = name[2];
+                    label_colab2.Text = name[2];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[2]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[2];
+                    info[7] = name[2];
+                    label_colab3.Text = name[2];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[2]);
                 }
                 else
                 {
@@ -434,60 +310,41 @@ namespace Project_Management_System
 
         private void lbl4Click(object sender, EventArgs e)
         {
-
-            int a = 3;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[3]) || label_colab2.Text.Equals(name[3]) || label_colab3.Equals(name[3]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[3] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[3];
+                    info[3] = name[3];
+                    label_colab1.Text = name[3];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[3]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[3];
+                    info[5] = name[3];
+                    label_colab2.Text = name[3];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[3]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[3];
+                    info[7] = name[3];
+                    label_colab3.Text = name[3];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[3]);
                 }
                 else
                 {
@@ -498,60 +355,41 @@ namespace Project_Management_System
 
         private void lbl5Click(object sender, EventArgs e)
         {
-
-            int a = 4;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[4]) || label_colab2.Text.Equals(name[4]) || label_colab3.Equals(name[4]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[4] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[4];
+                    info[3] = name[4];
+                    label_colab1.Text = name[4];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[4]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[4];
+                    info[5] = name[4];
+                    label_colab2.Text = name[4];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[4]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[4];
+                    info[7] = name[4];
+                    label_colab3.Text = name[4];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[4]);
                 }
                 else
                 {
@@ -562,60 +400,41 @@ namespace Project_Management_System
 
         private void lbl6Click(object sender, EventArgs e)
         {
-
-            int a = 5;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[5]) || label_colab2.Text.Equals(name[5]) || label_colab3.Equals(name[5]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[5] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[5];
+                    info[3] = name[5];
+                    label_colab1.Text = name[5];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[5]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[5];
+                    info[5] = name[5];
+                    label_colab2.Text = name[5];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[5]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[5];
+                    info[7] = name[5];
+                    label_colab3.Text = name[5];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[5]);
                 }
                 else
                 {
@@ -626,60 +445,41 @@ namespace Project_Management_System
 
         private void lbl7Click(object sender, EventArgs e)
         {
-
-            int a = 6;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[6]) || label_colab2.Text.Equals(name[6]) || label_colab3.Equals(name[6]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[6] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[6];
+                    info[3] = name[6];
+                    label_colab1.Text = name[6];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[6]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[6];
+                    info[5] = name[6];
+                    label_colab2.Text = name[6];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[6]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[6];
+                    info[7] = name[6];
+                    label_colab3.Text = name[6];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[6]);
                 }
                 else
                 {
@@ -690,60 +490,41 @@ namespace Project_Management_System
 
         private void lbl8Click(object sender, EventArgs e)
         {
-
-            int a = 7;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[7]) || label_colab2.Text.Equals(name[7]) || label_colab3.Equals(name[7]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[7] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[7];
+                    info[3] = name[7];
+                    label_colab1.Text = name[7];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[7]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[7];
+                    info[5] = name[7];
+                    label_colab2.Text = name[7];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[7]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[1];
+                    info[7] = name[1];
+                    label_colab3.Text = name[1];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[1]);
                 }
                 else
                 {
@@ -754,60 +535,41 @@ namespace Project_Management_System
 
         private void lbl9Click(object sender, EventArgs e)
         {
-
-            int a = 8;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[8]) || label_colab2.Text.Equals(name[8]) || label_colab3.Equals(name[8]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[8] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[8];
+                    info[3] = name[8];
+                    label_colab1.Text = name[8];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[8]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[8];
+                    info[5] = name[8];
+                    label_colab2.Text = name[8];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[8]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[8];
+                    info[7] = name[8];
+                    label_colab3.Text = name[8];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[8]);
                 }
                 else
                 {
@@ -818,59 +580,41 @@ namespace Project_Management_System
 
         private void lbl10Click(object sender, EventArgs e)
         {
-            int a = 9;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[9]) || label_colab2.Text.Equals(name[9]) || label_colab3.Equals(name[9]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[9] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[9];
+                    info[3] = name[9];
+                    label_colab1.Text = name[9];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[9]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[9];
+                    info[5] = name[9];
+                    label_colab2.Text = name[9];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[9]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[9];
+                    info[7] = name[9];
+                    label_colab3.Text = name[9];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[9]);
                 }
                 else
                 {
@@ -881,60 +625,41 @@ namespace Project_Management_System
 
         private void lbl11Click(object sender, EventArgs e)
         {
-
-            int a = 10;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[10]) || label_colab2.Text.Equals(name[10]) || label_colab3.Equals(name[10]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[10] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[10];
+                    info[3] = name[10];
+                    label_colab1.Text = name[10];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[10]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[10];
+                    info[5] = name[10];
+                    label_colab2.Text = name[10];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[10]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[10];
+                    info[7] = name[10];
+                    label_colab3.Text = name[10];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[10]);
                 }
                 else
                 {
@@ -945,60 +670,41 @@ namespace Project_Management_System
 
         private void lbl12Click(object sender, EventArgs e)
         {
-
-            int a = 11;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[11]) || label_colab2.Text.Equals(name[11]) || label_colab3.Equals(name[11]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[11] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[11];
+                    info[3] = name[11];
+                    label_colab1.Text = name[11];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[11]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[11];
+                    info[5] = name[11];
+                    label_colab2.Text = name[11];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[11]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[11];
+                    info[7] = name[11];
+                    label_colab3.Text = name[11];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[11]);
                 }
                 else
                 {
@@ -1009,125 +715,88 @@ namespace Project_Management_System
 
         private void lbl13Click(object sender, EventArgs e)
         {
-
-            int a = 12;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[12]) || label_colab2.Text.Equals(name[12]) || label_colab3.Equals(name[12]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[12] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[12];
+                    info[3] = name[12];
+                    label_colab1.Text = name[12];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[12]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[12];
+                    info[5] = name[12];
+                    label_colab2.Text = name[12];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[12]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[12];
+                    info[7] = name[12];
+                    label_colab3.Text = name[12];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[12]);
                 }
                 else
                 {
                     MessageBox.Show("Assaigned People exceed the limit.To insert new person please removeone!!!");
                 }
+
             }
         }
 
 
         private void lbl14Click(object sender, EventArgs e)
         {
-
-            int a = 13;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[13]) || label_colab2.Text.Equals(name[13]) || label_colab3.Equals(name[13]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[13] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[13];
+                    info[3] = name[13];
+                    label_colab1.Text = name[13];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[13]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[13];
+                    info[5] = name[13];
+                    label_colab2.Text = name[13];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[13]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[13];
+                    info[7] = name[13];
+                    label_colab3.Text = name[13];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[13]);
                 }
                 else
                 {
@@ -1138,68 +807,52 @@ namespace Project_Management_System
 
         private void lbl15Click(object sender, EventArgs e)
         {
-
-            int a = 14;
-            if (label_colab1.Text.Equals(name[a]) || label_colab2.Text.Equals(name[a]) || label_colab3.Equals(name[a]) || label_colab4.Equals(name[a]) || label_colab5.Equals(name[a]))
+            
+            if (label_colab1.Text.Equals(name[14]) || label_colab2.Text.Equals(name[14]) || label_colab3.Equals(name[14]))
             {
-                MessageBox.Show(name[a] + " " + "is already at the project!!!");
+                MessageBox.Show(name[14] + " " + "is already at the project!!!");
             }
 
             else
             {
+            
                 if (label_colab1.Text.Equals(""))
                 {
-                    info[5] = uname[a];
-                    info[6] = name[a];
-                    label_colab1.Text = name[a];
-                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    info[2] = uname[14];
+                    info[3] = name[14];
+                    label_colab1.Text = name[14];
                     linkLabel_remove1.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-
+                    linkLabel_remove1.Left = label_colab1.Right + 10;
+                    listView_search.Controls.Remove(lbl[14]);
                 }
                 else if (label_colab2.Text.Equals(""))
                 {
-                    info[7] = uname[a];
-                    info[8] = name[a];
-                    label_colab2.Text = name[a];
+                    info[4] = uname[14];
+                    info[5] = name[14];
+                    label_colab2.Text = name[14];
                     linkLabel_remove2.Left = label_colab2.Right + 10;
                     linkLabel_remove2.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[14]);
                 }
                 else if (label_colab3.Text.Equals(""))
                 {
-                    info[9] = uname[a];
-                    info[10] = name[a];
-                    label_colab3.Text = name[a];
+                    info[6] = uname[14];
+                    info[7] = name[14];
+                    label_colab3.Text = name[14];
                     linkLabel_remove3.Left = label_colab3.Right + 10;
                     linkLabel_remove3.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab4.Text.Equals(""))
-                {
-                    info[11] = uname[a];
-                    info[12] = name[a];
-                    label_colab4.Text = name[a];
-                    linkLabel_remove4.Left = label_colab3.Right + 10;
-                    linkLabel_remove4.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
-                }
-                else if (label_colab5.Text.Equals(""))
-                {
-                    info[13] = uname[a];
-                    info[14] = name[a];
-                    label_colab5.Text = name[a];
-                    linkLabel_remove5.Left = label_colab3.Right + 10;
-                    linkLabel_remove5.Visible = true;
-                    listView_search.Controls.Remove(lbl[a]);
+                    listView_search.Controls.Remove(lbl[14]);
                 }
                 else
                 {
                     MessageBox.Show("Assaigned People exceed the limit.To insert new person please removeone!!!");
                 }
+
             }
         }
 
-        
+
+
+ 
     }
 }

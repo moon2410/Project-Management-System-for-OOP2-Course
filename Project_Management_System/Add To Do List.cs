@@ -36,22 +36,22 @@ namespace Project_Management_System
             dateTimePicker_date.Format = DateTimePickerFormat.Custom;
             dateTimePicker_date.CustomFormat = "dd MMMM yyyy";
 
-            if (!info[3].Equals(""))
+            if (!info[5].Equals(""))
             {
-                label_colab1.Text= info[3];
+                label_colab1.Text= info[5];
                 linkLabel_add_colab1.Visible = true;
                 linkLabel_add_colab1.Left = label_colab1.Right + 10;
 
             }
-            if (!info[5].Equals(""))
+            if (!info[7].Equals(""))
             {
-                label_colab2.Text = info[5];
+                label_colab2.Text = info[7];
                 linkLabel_add_colab2.Visible = true;
                 linkLabel_add_colab2.Left = label_colab2.Right + 10;
             }
-            if (!info[7].Equals(""))
+            if (!info[9].Equals(""))
             {
-                label_colab3.Text = info[7];
+                label_colab3.Text = info[9];
                 linkLabel_add_colab3.Visible = true;
                 linkLabel_add_colab3.Left = label_colab3.Right + 10;
             }
@@ -60,22 +60,22 @@ namespace Project_Management_System
         private void linkLabel_add_colab1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             textBox_assaignedto.Text = label_colab1.Text;
-            name = info[3];
-            username = info[2];
+            name = info[5];
+            username = info[4];
         }
 
         private void linkLabel_add_colab2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             textBox_assaignedto.Text = label_colab2.Text;
-            name = info[5];
-            username = info[4];
+            name = info[7];
+            username = info[6];
         }
 
         private void linkLabel_add_colab3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             textBox_assaignedto.Text = label_colab3.Text;
-            name = info[7];
-            username = info[6];
+            name = info[9];
+            username = info[8];
         }
 
         private void button_add_Click(object sender, EventArgs e)

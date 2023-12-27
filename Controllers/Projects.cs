@@ -9,13 +9,13 @@ namespace Controllers
 {
     public class Projects
     {
-        public void addingProject(string tablename, string projecttitle, string description,string projectcreator, string creationdate, string completationdate, string uname1, string name1, string uname2, string name2, string uname3, string name3, string uname4, string name4, string uname5, string name5)
+        public void addingProject(string tablename, string projecttitle, string description,string projectcreator, string creationdate, string uname1, string name1, string uname2, string name2, string uname3, string name3)
         {
             AddProject ap = new AddProject();
             int rows = ap.checkProject(projecttitle);
             if (rows == 0)
             {
-                ap.projectAdd(projecttitle, description, projectcreator, creationdate, completationdate, uname1, name1, uname2, name2, uname3, name3, uname4, name4, uname5, name5);
+                ap.projectAdd(projecttitle, description, projectcreator, creationdate, uname1, name1, uname2, name2, uname3, name3);
                 ap.createProjectTable(tablename);
             }
             else
@@ -47,7 +47,7 @@ namespace Controllers
         public void editingProject(string[] info, string projectname)
         {
             EditProject ep = new EditProject();
-            ep.updateProject(projectname, info[1], info[2], info[3], info[4], info[5], info[6], info[7], info[8], info[9], info[10], info[11], info[12], info[13], info[14], info[0] );
+            ep.updateProject(projectname, info[1], info[2], info[3], info[4], info[5], info[6], info[7], info[8], info[9], info[0] );
 
             if (projectname != info[0])
             {

@@ -122,12 +122,6 @@ namespace Project_Management_System
             afb.Show();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            AdminMessageBox adminMessageBox = new AdminMessageBox(username);
-            adminMessageBox.Show();
-        }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -176,17 +176,6 @@
             this.btn_facultylist.UseVisualStyleBackColor = false;
             this.btn_facultylist.Click += new System.EventHandler(this.btn_facultylist_Click);
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.SkyBlue;
-            this.button6.Location = new System.Drawing.Point(74, 414);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 32);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "MessageBox";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // BackButton
             // 
             this.BackButton.BackColor = System.Drawing.Color.SkyBlue;

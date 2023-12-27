@@ -41,6 +41,8 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.menuStrip_profile = new System.Windows.Forms.MenuStrip();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facultyListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,8 +68,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_Department = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip_profile.SuspendLayout();
             this.SuspendLayout();
@@ -175,17 +175,7 @@
             this.button3.Text = "FacultyList";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.SkyBlue;
-            this.button6.Location = new System.Drawing.Point(74, 440);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 32);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "MessageBox";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+
             // 
             // BackButton
             // 
@@ -224,6 +214,19 @@
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
             this.profileToolStripMenuItem.Text = "Account";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Text = "Edit Profile";
+            // 
+            // changePasswordToolStripMenuItem1
+            // 
+            this.changePasswordToolStripMenuItem1.Name = "changePasswordToolStripMenuItem1";
+            this.changePasswordToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem1.Text = "Change password";
+            this.changePasswordToolStripMenuItem1.Click += new System.EventHandler(this.changePasswordToolStripMenuItem1_Click);
             // 
             // projectToolStripMenuItem
             // 
@@ -271,7 +274,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel6.Location = new System.Drawing.Point(731, 222);
+            this.panel6.Location = new System.Drawing.Point(953, 222);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(7, 260);
@@ -474,19 +477,6 @@
             this.label3.Size = new System.Drawing.Size(177, 24);
             this.label3.TabIndex = 215;
             this.label3.Text = "Department          ";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.changePasswordToolStripMenuItem.Text = "Edit Profile";
-            // 
-            // changePasswordToolStripMenuItem1
-            // 
-            this.changePasswordToolStripMenuItem1.Name = "changePasswordToolStripMenuItem1";
-            this.changePasswordToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.changePasswordToolStripMenuItem1.Text = "Change password";
-            this.changePasswordToolStripMenuItem1.Click += new System.EventHandler(this.changePasswordToolStripMenuItem1_Click);
             // 
             // AdminAccount
             // 

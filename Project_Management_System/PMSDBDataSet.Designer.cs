@@ -2082,8 +2082,6 @@ namespace Project_Management_System {
             
             private global::System.Data.DataColumn columnCreationdate;
             
-            private global::System.Data.DataColumn columnCompletationdate;
-            
             private global::System.Data.DataColumn columnuser1username;
             
             private global::System.Data.DataColumn columnuser1name;
@@ -2095,14 +2093,6 @@ namespace Project_Management_System {
             private global::System.Data.DataColumn columnuser3username;
             
             private global::System.Data.DataColumn columnuser3name;
-            
-            private global::System.Data.DataColumn columnuser4username;
-            
-            private global::System.Data.DataColumn columnuser4name;
-            
-            private global::System.Data.DataColumn columnuser5username;
-            
-            private global::System.Data.DataColumn columnuser5name;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2171,14 +2161,6 @@ namespace Project_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CompletationdateColumn {
-                get {
-                    return this.columnCompletationdate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn user1usernameColumn {
                 get {
                     return this.columnuser1username;
@@ -2227,38 +2209,6 @@ namespace Project_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn user4usernameColumn {
-                get {
-                    return this.columnuser4username;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn user4nameColumn {
-                get {
-                    return this.columnuser4name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn user5usernameColumn {
-                get {
-                    return this.columnuser5username;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn user5nameColumn {
-                get {
-                    return this.columnuser5name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2294,24 +2244,19 @@ namespace Project_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProjectsRow AddProjectsRow(string Project, string ProjectDescription, string ProjectCreator, string Creationdate, string Completationdate, string user1username, string user1name, string user2username, string user2name, string user3username, string user3name, string user4username, string user4name, string user5username, string user5name) {
+            public ProjectsRow AddProjectsRow(string Project, string ProjectDescription, string ProjectCreator, string Creationdate, string user1username, string user1name, string user2username, string user2name, string user3username, string user3name) {
                 ProjectsRow rowProjectsRow = ((ProjectsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Project,
                         ProjectDescription,
                         ProjectCreator,
                         Creationdate,
-                        Completationdate,
                         user1username,
                         user1name,
                         user2username,
                         user2name,
                         user3username,
-                        user3name,
-                        user4username,
-                        user4name,
-                        user5username,
-                        user5name};
+                        user3name};
                 rowProjectsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProjectsRow);
                 return rowProjectsRow;
@@ -2338,17 +2283,12 @@ namespace Project_Management_System {
                 this.columnProjectDescription = base.Columns["ProjectDescription"];
                 this.columnProjectCreator = base.Columns["ProjectCreator"];
                 this.columnCreationdate = base.Columns["Creationdate"];
-                this.columnCompletationdate = base.Columns["Completationdate"];
                 this.columnuser1username = base.Columns["user1username"];
                 this.columnuser1name = base.Columns["user1name"];
                 this.columnuser2username = base.Columns["user2username"];
                 this.columnuser2name = base.Columns["user2name"];
                 this.columnuser3username = base.Columns["user3username"];
                 this.columnuser3name = base.Columns["user3name"];
-                this.columnuser4username = base.Columns["user4username"];
-                this.columnuser4name = base.Columns["user4name"];
-                this.columnuser5username = base.Columns["user5username"];
-                this.columnuser5name = base.Columns["user5name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2362,8 +2302,6 @@ namespace Project_Management_System {
                 base.Columns.Add(this.columnProjectCreator);
                 this.columnCreationdate = new global::System.Data.DataColumn("Creationdate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCreationdate);
-                this.columnCompletationdate = new global::System.Data.DataColumn("Completationdate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCompletationdate);
                 this.columnuser1username = new global::System.Data.DataColumn("user1username", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuser1username);
                 this.columnuser1name = new global::System.Data.DataColumn("user1name", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2376,30 +2314,17 @@ namespace Project_Management_System {
                 base.Columns.Add(this.columnuser3username);
                 this.columnuser3name = new global::System.Data.DataColumn("user3name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuser3name);
-                this.columnuser4username = new global::System.Data.DataColumn("user4username", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnuser4username);
-                this.columnuser4name = new global::System.Data.DataColumn("user4name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnuser4name);
-                this.columnuser5username = new global::System.Data.DataColumn("user5username", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnuser5username);
-                this.columnuser5name = new global::System.Data.DataColumn("user5name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnuser5name);
                 this.columnProject.AllowDBNull = false;
                 this.columnProject.MaxLength = 2147483647;
                 this.columnProjectDescription.MaxLength = 2147483647;
                 this.columnProjectCreator.MaxLength = 50;
                 this.columnCreationdate.MaxLength = 50;
-                this.columnCompletationdate.MaxLength = 50;
                 this.columnuser1username.MaxLength = 50;
                 this.columnuser1name.MaxLength = 100;
                 this.columnuser2username.MaxLength = 50;
                 this.columnuser2name.MaxLength = 100;
                 this.columnuser3username.MaxLength = 50;
                 this.columnuser3name.MaxLength = 100;
-                this.columnuser4username.MaxLength = 50;
-                this.columnuser4name.MaxLength = 100;
-                this.columnuser5username.MaxLength = 50;
-                this.columnuser5name.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3588,22 +3513,6 @@ namespace Project_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Completationdate {
-                get {
-                    try {
-                        return ((string)(this[this.tableProjects.CompletationdateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Completationdate\' in table \'Projects\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProjects.CompletationdateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string user1username {
                 get {
                     try {
@@ -3700,70 +3609,6 @@ namespace Project_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string user4username {
-                get {
-                    try {
-                        return ((string)(this[this.tableProjects.user4usernameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'user4username\' in table \'Projects\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProjects.user4usernameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string user4name {
-                get {
-                    try {
-                        return ((string)(this[this.tableProjects.user4nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'user4name\' in table \'Projects\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProjects.user4nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string user5username {
-                get {
-                    try {
-                        return ((string)(this[this.tableProjects.user5usernameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'user5username\' in table \'Projects\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProjects.user5usernameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string user5name {
-                get {
-                    try {
-                        return ((string)(this[this.tableProjects.user5nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'user5name\' in table \'Projects\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProjects.user5nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsProjectDescriptionNull() {
                 return this.IsNull(this.tableProjects.ProjectDescriptionColumn);
             }
@@ -3796,18 +3641,6 @@ namespace Project_Management_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCreationdateNull() {
                 this[this.tableProjects.CreationdateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCompletationdateNull() {
-                return this.IsNull(this.tableProjects.CompletationdateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCompletationdateNull() {
-                this[this.tableProjects.CompletationdateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3880,54 +3713,6 @@ namespace Project_Management_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setuser3nameNull() {
                 this[this.tableProjects.user3nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isuser4usernameNull() {
-                return this.IsNull(this.tableProjects.user4usernameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setuser4usernameNull() {
-                this[this.tableProjects.user4usernameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isuser4nameNull() {
-                return this.IsNull(this.tableProjects.user4nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setuser4nameNull() {
-                this[this.tableProjects.user4nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isuser5usernameNull() {
-                return this.IsNull(this.tableProjects.user5usernameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setuser5usernameNull() {
-                this[this.tableProjects.user5usernameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isuser5nameNull() {
-                return this.IsNull(this.tableProjects.user5nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setuser5nameNull() {
-                this[this.tableProjects.user5nameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6760,37 +6545,27 @@ SELECT UserName, FirstName, LastName, PhoneNumber, EMail, Gender, BirthDate, Dep
             tableMapping.ColumnMappings.Add("ProjectDescription", "ProjectDescription");
             tableMapping.ColumnMappings.Add("ProjectCreator", "ProjectCreator");
             tableMapping.ColumnMappings.Add("Creationdate", "Creationdate");
-            tableMapping.ColumnMappings.Add("Completationdate", "Completationdate");
             tableMapping.ColumnMappings.Add("user1username", "user1username");
             tableMapping.ColumnMappings.Add("user1name", "user1name");
             tableMapping.ColumnMappings.Add("user2username", "user2username");
             tableMapping.ColumnMappings.Add("user2name", "user2name");
             tableMapping.ColumnMappings.Add("user3username", "user3username");
             tableMapping.ColumnMappings.Add("user3name", "user3name");
-            tableMapping.ColumnMappings.Add("user4username", "user4username");
-            tableMapping.ColumnMappings.Add("user4name", "user4name");
-            tableMapping.ColumnMappings.Add("user5username", "user5username");
-            tableMapping.ColumnMappings.Add("user5name", "user5name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Projects] ([Project], [ProjectDescription], [ProjectCreator], [Creationdate], [Completationdate], [user1username], [user1name], [user2username], [user2name], [user3username], [user3name], [user4username], [user4name], [user5username], [user5name]) VALUES (@Project, @ProjectDescription, @ProjectCreator, @Creationdate, @Completationdate, @user1username, @user1name, @user2username, @user2name, @user3username, @user3name, @user4username, @user4name, @user5username, @user5name)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Projects] ([Project], [ProjectDescription], [ProjectCreator], [Creationdate], [user1username], [user1name], [user2username], [user2name], [user3username], [user3name]) VALUES (@Project, @ProjectDescription, @ProjectCreator, @Creationdate, @user1username, @user1name, @user2username, @user2name, @user3username, @user3name)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProjectDescription", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProjectDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProjectCreator", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProjectCreator", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Creationdate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Creationdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Completationdate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Completationdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user1username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user1username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user1name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user1name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user2username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user2username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user2name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user2name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user3username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user3username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user3name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user3name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user4username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user4username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user4name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user4name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user5username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user5username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user5name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "user5name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6806,9 +6581,8 @@ SELECT UserName, FirstName, LastName, PhoneNumber, EMail, Gender, BirthDate, Dep
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Project, ProjectDescription, ProjectCreator, Creationdate, Completationdat" +
-                "e, user1username, user1name, user2username, user2name, user3username, user3name," +
-                " user4username, user4name, user5username, user5name FROM dbo.Projects";
+            this._commandCollection[0].CommandText = "SELECT Project, ProjectDescription, ProjectCreator, Creationdate, user1username, " +
+                "user1name, user2username, user2name, user3username, user3name FROM Projects";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6869,7 +6643,7 @@ SELECT UserName, FirstName, LastName, PhoneNumber, EMail, Gender, BirthDate, Dep
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Project, string ProjectDescription, string ProjectCreator, string Creationdate, string Completationdate, string user1username, string user1name, string user2username, string user2name, string user3username, string user3name, string user4username, string user4name, string user5username, string user5name) {
+        public virtual int Insert(string Project, string ProjectDescription, string ProjectCreator, string Creationdate, string user1username, string user1name, string user2username, string user2name, string user3username, string user3name) {
             if ((Project == null)) {
                 throw new global::System.ArgumentNullException("Project");
             }
@@ -6894,71 +6668,41 @@ SELECT UserName, FirstName, LastName, PhoneNumber, EMail, Gender, BirthDate, Dep
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Creationdate));
             }
-            if ((Completationdate == null)) {
+            if ((user1username == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Completationdate));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(user1username));
             }
-            if ((user1username == null)) {
+            if ((user1name == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(user1username));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(user1name));
             }
-            if ((user1name == null)) {
+            if ((user2username == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(user1name));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(user2username));
             }
-            if ((user2username == null)) {
+            if ((user2name == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(user2username));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(user2name));
             }
-            if ((user2name == null)) {
+            if ((user3username == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(user2name));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(user3username));
             }
-            if ((user3username == null)) {
+            if ((user3name == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(user3username));
-            }
-            if ((user3name == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(user3name));
-            }
-            if ((user4username == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(user4username));
-            }
-            if ((user4name == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(user4name));
-            }
-            if ((user5username == null)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(user5username));
-            }
-            if ((user5name == null)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(user5name));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(user3name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7928,21 +7672,21 @@ SELECT UserName, FirstName, LastName, PhoneNumber, EMail, Gender, BirthDate, Dep
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._projectsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Projects.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._projectsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._studentsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Students.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._studentsTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._projectsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Projects.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._projectsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7996,19 +7740,19 @@ SELECT UserName, FirstName, LastName, PhoneNumber, EMail, Gender, BirthDate, Dep
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._projectsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Projects.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._projectsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._studentsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Students.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._studentsTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._projectsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Projects.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._projectsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -8022,19 +7766,19 @@ SELECT UserName, FirstName, LastName, PhoneNumber, EMail, Gender, BirthDate, Dep
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(PMSDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._studentsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Students.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._studentsTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._projectsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Projects.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._projectsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._studentsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Students.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._studentsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
