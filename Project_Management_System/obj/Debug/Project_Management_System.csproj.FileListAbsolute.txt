@@ -27,12 +27,9 @@ D:\repos\Project_Management_System\obj\Debug\Project_Management_System.StudentSu
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.StudentTsk.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminAccount.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.AdminFacultyBoard.resources
-D:\repos\Project_Management_System\obj\Debug\Project_Management_System.Faculty_TaskBoard.resources
-D:\repos\Project_Management_System\obj\Debug\Project_Management_System.facultyAppliedStudent.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyAssignedStudentList.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyChangePass.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyFacultyList.resources
-D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyGroups.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.facultyProfile.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyProfileEdit.resources
 D:\repos\Project_Management_System\obj\Debug\Project_Management_System.FacultyStudentist.resources

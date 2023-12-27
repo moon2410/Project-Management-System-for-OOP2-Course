@@ -63,6 +63,7 @@
             this.button3.TabIndex = 337;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txt_birthday
             // 

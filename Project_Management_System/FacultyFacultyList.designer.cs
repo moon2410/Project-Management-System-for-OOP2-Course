@@ -46,21 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button11 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.BackButton = new System.Windows.Forms.Button();
-            this.pMSDBDataSet = new Project_Management_System.PMSDBDataSet();
-            this.facultiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facultiesTableAdapter = new Project_Management_System.PMSDBDataSetTableAdapters.FacultiesTableAdapter();
             this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,11 +55,24 @@
             this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currentAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pMSDBDataSet = new Project_Management_System.PMSDBDataSet();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.facultiesTableAdapter = new Project_Management_System.PMSDBDataSetTableAdapters.FacultiesTableAdapter();
             this.menuStrip_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facultiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // logoutToolStripMenuItem
@@ -87,16 +85,12 @@
             // groupsToolStripMenuItem
             // 
             this.groupsToolStripMenuItem.Name = "groupsToolStripMenuItem";
-            this.groupsToolStripMenuItem.Size = new System.Drawing.Size(57, 22);
-            this.groupsToolStripMenuItem.Text = "Groups";
-            this.groupsToolStripMenuItem.Click += new System.EventHandler(this.groupsToolStripMenuItem_Click);
+            this.groupsToolStripMenuItem.Size = new System.Drawing.Size(12, 22);
             // 
             // appliedStudentToolStripMenuItem
             // 
             this.appliedStudentToolStripMenuItem.Name = "appliedStudentToolStripMenuItem";
             this.appliedStudentToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.appliedStudentToolStripMenuItem.Text = "Applied Student";
-            this.appliedStudentToolStripMenuItem.Click += new System.EventHandler(this.appliedStudentToolStripMenuItem_Click);
             // 
             // currentStudentToolStripMenuItem
             // 
@@ -133,9 +127,7 @@
             // tasksToolStripMenuItem
             // 
             this.tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
-            this.tasksToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
-            this.tasksToolStripMenuItem.Text = "Tasks";
-            this.tasksToolStripMenuItem.Click += new System.EventHandler(this.tasksToolStripMenuItem_Click);
+            this.tasksToolStripMenuItem.Size = new System.Drawing.Size(12, 22);
             // 
             // projectToolStripMenuItem
             // 
@@ -237,159 +229,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(920, 478);
             this.dataGridView2.TabIndex = 179;
             // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.SkyBlue;
-            this.button11.Location = new System.Drawing.Point(84, 510);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(87, 32);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Groups";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Azure;
-            this.panel4.Location = new System.Drawing.Point(81, 365);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(89, 6);
-            this.panel4.TabIndex = 8;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SkyBlue;
-            this.button7.Location = new System.Drawing.Point(84, 465);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(87, 32);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Applied Student List";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 81);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 26);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Faculty";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Location = new System.Drawing.Point(0, 188);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 6);
-            this.panel2.TabIndex = 6;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.SkyBlue;
-            this.button5.Location = new System.Drawing.Point(84, 403);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 32);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Student List";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SkyBlue;
-            this.button4.Location = new System.Drawing.Point(84, 339);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 32);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Faculty list";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.Location = new System.Drawing.Point(84, 281);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 32);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Tasks";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SkyBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(84, 216);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 32);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Projects";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.Location = new System.Drawing.Point(84, 558);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 32);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Profile";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.BackButton);
-            this.panel1.Location = new System.Drawing.Point(8, -13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 692);
-            this.panel1.TabIndex = 177;
-            // 
-            // BackButton
-            // 
-            this.BackButton.BackColor = System.Drawing.Color.SkyBlue;
-            this.BackButton.Location = new System.Drawing.Point(59, 628);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(87, 29);
-            this.BackButton.TabIndex = 3;
-            this.BackButton.Text = "LogOut";
-            this.BackButton.UseVisualStyleBackColor = false;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
-            // pMSDBDataSet
-            // 
-            this.pMSDBDataSet.DataSetName = "PMSDBDataSet";
-            this.pMSDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // facultiesBindingSource
-            // 
-            this.facultiesBindingSource.DataMember = "Faculties";
-            this.facultiesBindingSource.DataSource = this.pMSDBDataSet;
-            // 
-            // facultiesTableAdapter
-            // 
-            this.facultiesTableAdapter.ClearBeforeFill = true;
-            // 
             // userNameDataGridViewTextBoxColumn
             // 
             this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
@@ -444,6 +283,132 @@
             this.currentAddressDataGridViewTextBoxColumn.HeaderText = "CurrentAddress";
             this.currentAddressDataGridViewTextBoxColumn.Name = "currentAddressDataGridViewTextBoxColumn";
             // 
+            // facultiesBindingSource
+            // 
+            this.facultiesBindingSource.DataMember = "Faculties";
+            this.facultiesBindingSource.DataSource = this.pMSDBDataSet;
+            // 
+            // pMSDBDataSet
+            // 
+            this.pMSDBDataSet.DataSetName = "PMSDBDataSet";
+            this.pMSDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Azure;
+            this.panel4.Location = new System.Drawing.Point(81, 365);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(89, 6);
+            this.panel4.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(3, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 26);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Faculty";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Location = new System.Drawing.Point(0, 188);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 6);
+            this.panel2.TabIndex = 6;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.SkyBlue;
+            this.button5.Location = new System.Drawing.Point(84, 403);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(87, 32);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Student List";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SkyBlue;
+            this.button4.Location = new System.Drawing.Point(84, 339);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(87, 32);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Faculty list";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 11;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SkyBlue;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(84, 216);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 32);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Projects";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.Location = new System.Drawing.Point(84, 558);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 32);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Profile";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BackButton);
+            this.panel1.Location = new System.Drawing.Point(8, -13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(219, 692);
+            this.panel1.TabIndex = 177;
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.SkyBlue;
+            this.BackButton.Location = new System.Drawing.Point(59, 628);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(87, 29);
+            this.BackButton.TabIndex = 3;
+            this.BackButton.Text = "LogOut";
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // facultiesTableAdapter
+            // 
+            this.facultiesTableAdapter.ClearBeforeFill = true;
+            // 
             // FacultyFacultyList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,10 +430,10 @@
             this.menuStrip_profile.ResumeLayout(false);
             this.menuStrip_profile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facultiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pMSDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facultiesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,9 +458,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button5;

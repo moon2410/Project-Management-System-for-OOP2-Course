@@ -115,12 +115,6 @@
     <Compile Include="Edit To Do.designer.cs">
       <DependentUpon>Edit To Do.cs</DependentUpon>
     </Compile>
-    <Compile Include="facultyAppliedStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="facultyAppliedStudent.designer.cs">
-      <DependentUpon>facultyAppliedStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="FacultyAssignedStudentList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,12 +144,6 @@
     </Compile>
     <Compile Include="FacultyFacultyList.designer.cs">
       <DependentUpon>FacultyFacultyList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FacultyGroups.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FacultyGroups.designer.cs">
-      <DependentUpon>FacultyGroups.cs</DependentUpon>
     </Compile>
     <Compile Include="facultyProfile.cs">
       <SubType>Form</SubType>
@@ -299,9 +287,6 @@
     <EmbeddedResource Include="Edit To Do.resx">
       <DependentUpon>Edit To Do.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="facultyAppliedStudent.resx">
-      <DependentUpon>facultyAppliedStudent.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FacultyAssignedStudentList.resx">
       <DependentUpon>FacultyAssignedStudentList.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,9 +301,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacultyFacultyList.resx">
       <DependentUpon>FacultyFacultyList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FacultyGroups.resx">
-      <DependentUpon>FacultyGroups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="facultyProfile.resx">
       <DependentUpon>facultyProfile.cs</DependentUpon>

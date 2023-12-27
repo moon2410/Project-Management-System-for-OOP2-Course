@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -74,7 +73,6 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button5);
@@ -84,7 +82,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BackButton);
             this.panel1.Location = new System.Drawing.Point(8, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 639);
             this.panel1.TabIndex = 175;
@@ -92,7 +90,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.SkyBlue;
-            this.button6.Location = new System.Drawing.Point(71, 601);
+            this.button6.Location = new System.Drawing.Point(73, 569);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 32);
             this.button6.TabIndex = 12;
@@ -104,21 +102,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Azure;
             this.panel4.Location = new System.Drawing.Point(71, 429);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(89, 6);
             this.panel4.TabIndex = 8;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SkyBlue;
-            this.button7.Location = new System.Drawing.Point(71, 456);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(87, 32);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Applied Student List";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label1
             // 
@@ -136,7 +123,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Location = new System.Drawing.Point(0, 188);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 6);
             this.panel2.TabIndex = 6;
@@ -162,17 +149,6 @@
             this.button4.Text = "Faculty list";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.Location = new System.Drawing.Point(71, 276);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 32);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Tasks";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -208,20 +184,6 @@
             this.BackButton.Text = "LogOut";
             this.BackButton.UseVisualStyleBackColor = false;
             // 
-            // groupsToolStripMenuItem
-            // 
-            this.groupsToolStripMenuItem.Name = "groupsToolStripMenuItem";
-            this.groupsToolStripMenuItem.Size = new System.Drawing.Size(57, 22);
-            this.groupsToolStripMenuItem.Text = "Groups";
-            this.groupsToolStripMenuItem.Click += new System.EventHandler(this.groupsToolStripMenuItem_Click);
-            // 
-            // appliedStudentToolStripMenuItem
-            // 
-            this.appliedStudentToolStripMenuItem.Name = "appliedStudentToolStripMenuItem";
-            this.appliedStudentToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.appliedStudentToolStripMenuItem.Text = "Applied Student";
-            this.appliedStudentToolStripMenuItem.Click += new System.EventHandler(this.appliedStudentToolStripMenuItem_Click);
-            // 
             // currentStudentToolStripMenuItem
             // 
             this.currentStudentToolStripMenuItem.Name = "currentStudentToolStripMenuItem";
@@ -254,13 +216,6 @@
             this.facultyListToolStripMenuItem.Text = "Faculty List";
             this.facultyListToolStripMenuItem.Click += new System.EventHandler(this.facultyListToolStripMenuItem_Click);
             // 
-            // tasksToolStripMenuItem
-            // 
-            this.tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
-            this.tasksToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
-            this.tasksToolStripMenuItem.Text = "Tasks";
-            this.tasksToolStripMenuItem.Click += new System.EventHandler(this.tasksToolStripMenuItem_Click);
-            // 
             // projectToolStripMenuItem
             // 
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
@@ -291,7 +246,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Azure;
             this.panel3.Location = new System.Drawing.Point(230, 77);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1027, 6);
             this.panel3.TabIndex = 176;
@@ -342,7 +297,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(296, 132);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
@@ -359,7 +314,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuStrip_profile);
             this.Controls.Add(this.dataGridView2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1285, 716);
             this.MinimumSize = new System.Drawing.Size(1284, 714);
@@ -382,7 +337,6 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button5;

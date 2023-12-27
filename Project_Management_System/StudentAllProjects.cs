@@ -12,8 +12,14 @@ namespace Project_Management_System
 {
     public partial class StudentAllProjects : Form
     {
+        string username = "";
         public StudentAllProjects()
         {
+            InitializeComponent();
+        }
+        public StudentAllProjects(string username)
+        {
+            this.username = username;
             InitializeComponent();
         }
 

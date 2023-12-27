@@ -177,35 +177,6 @@ namespace Project_Management_System
             LoginPage ads = new LoginPage();
             ads.Show();
         }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FacultyGroups ads = new FacultyGroups();
-            ads.Show();
-        }
-
-        private void groupsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FacultyGroups ads = new FacultyGroups();
-            ads.Show();
-        }
-
-        private void tasksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Faculty_TaskBoard ads = new Faculty_TaskBoard();
-            ads.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Faculty_TaskBoard ads = new Faculty_TaskBoard();
-            ads.Show();
-        }
-
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -241,16 +212,11 @@ namespace Project_Management_System
             ads.Show();
         }
 
-        private void appliedStudentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            facultyAppliedStudent ads = new facultyAppliedStudent();
-            ads.Show();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FacultyDashboard ads = new FacultyDashboard(username);
+            ads.Show();
         }
 
         private void FacultyDashboard_Load(object sender, EventArgs e)

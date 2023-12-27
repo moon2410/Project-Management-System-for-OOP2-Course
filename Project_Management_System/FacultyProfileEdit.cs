@@ -59,5 +59,12 @@ namespace Project_Management_System
             FacultyProfileEdit_Load(sender, e);
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            facultyProfile facultyProfile  = new facultyProfile(username);  
+            facultyProfile.Show();
+        }
     }
 }

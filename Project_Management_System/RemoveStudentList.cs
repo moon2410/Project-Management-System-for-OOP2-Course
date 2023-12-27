@@ -31,13 +31,6 @@ namespace Project_Management_System
             ads.Show();
         }
 
-        private void appliedStudentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            facultyAppliedStudent ads = new facultyAppliedStudent();
-            ads.Show();
-        }
-
         private void RemoveStudentList_Load(object sender, EventArgs e)
         {
 

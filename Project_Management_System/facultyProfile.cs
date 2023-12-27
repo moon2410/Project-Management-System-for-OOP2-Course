@@ -80,28 +80,6 @@ namespace Project_Management_System
             LoginPage ads = new LoginPage();
             ads.Show();
         }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FacultyGroups ads = new FacultyGroups();
-            ads.Show();
-        }
-
-        private void groupsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FacultyGroups ads = new FacultyGroups();
-            ads.Show();
-        }
-
-        private void tasksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Faculty_TaskBoard ads = new Faculty_TaskBoard();
-            ads.Show();
-        }
-
         private void projectToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Hide();
@@ -112,7 +90,7 @@ namespace Project_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FacultyDashboard ads = new FacultyDashboard();
+            FacultyDashboard ads = new FacultyDashboard(username);
             ads.Show();
         }
 
@@ -143,14 +121,6 @@ namespace Project_Management_System
             FacultyStudentist ads = new FacultyStudentist();
             ads.Show();
         }
-
-        private void appliedStudentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            facultyAppliedStudent ads = new facultyAppliedStudent();
-            ads.Show();
-        }
-
         private void label7_Click_1(object sender, EventArgs e)
         {
 
@@ -174,6 +144,32 @@ namespace Project_Management_System
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultyFacultyList facultyFacultyList  = new FacultyFacultyList(username);
+            facultyFacultyList.Show();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FacultyStudentist facultyStudentist = new FacultyStudentist(username);  facultyStudentist.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            facultyProfile facultyProfile = new facultyProfile(username);
+            facultyProfile.Show();
         }
     }
 }

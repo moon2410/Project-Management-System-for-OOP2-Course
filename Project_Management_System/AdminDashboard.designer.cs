@@ -450,9 +450,9 @@
         private PMSDBDataSet pMSDBDataSet;
         private System.Windows.Forms.BindingSource projectsBindingSource;
         private PMSDBDataSetTableAdapters.ProjectsTableAdapter projectsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user6nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projectDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projectdescriptionDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn user6nameDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn projectDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn projectdescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn completationdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user4usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn user4nameDataGridViewTextBoxColumn;

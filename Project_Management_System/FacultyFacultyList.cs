@@ -12,8 +12,14 @@ namespace Project_Management_System
 {
     public partial class FacultyFacultyList : Form
     {
+        string username = "";
         public FacultyFacultyList()
         {
+            InitializeComponent();
+        }
+        public FacultyFacultyList(string username)
+        {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -38,12 +44,6 @@ namespace Project_Management_System
             ads.Show();
         }
 
-        private void tasksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Faculty_TaskBoard ads = new Faculty_TaskBoard();
-            ads.Show();
-        }
 
         private void facultyListToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -71,20 +71,6 @@ namespace Project_Management_System
             ads.Show();
         }
 
-        private void appliedStudentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            facultyAppliedStudent ads = new facultyAppliedStudent();
-            ads.Show();
-        }
-
-        private void groupsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FacultyGroups ads = new FacultyGroups();
-            ads.Show();
-        }
-
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -95,38 +81,15 @@ namespace Project_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FacultyDashboard ads = new FacultyDashboard();
+            FacultyDashboard ads = new FacultyDashboard(username);
             ads.Show();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Faculty_TaskBoard ads = new Faculty_TaskBoard();
-            ads.Show();
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FacultyStudentist ads = new FacultyStudentist();
+            FacultyStudentist ads = new FacultyStudentist(username);
             ads.Show();
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            facultyAppliedStudent ads = new facultyAppliedStudent();
-            ads.Show();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FacultyGroups ads = new FacultyGroups();
-            ads.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -145,6 +108,11 @@ namespace Project_Management_System
         {
             // TODO: This line of code loads data into the 'pMSDBDataSet.Faculties' table. You can move, or remove it, as needed.
             this.facultiesTableAdapter.Fill(this.pMSDBDataSet.Faculties);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
 
         }
     }

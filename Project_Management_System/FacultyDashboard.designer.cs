@@ -167,17 +167,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.Location = new System.Drawing.Point(89, 285);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 32);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Tasks";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.SkyBlue;
@@ -260,13 +249,6 @@
             this.projectToolStripMenuItem.Text = "Project";
             this.projectToolStripMenuItem.Click += new System.EventHandler(this.projectToolStripMenuItem_Click);
             // 
-            // tasksToolStripMenuItem
-            // 
-            this.tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
-            this.tasksToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
-            this.tasksToolStripMenuItem.Text = "Tasks";
-            this.tasksToolStripMenuItem.Click += new System.EventHandler(this.tasksToolStripMenuItem_Click);
-            // 
             // facultyListToolStripMenuItem
             // 
             this.facultyListToolStripMenuItem.Name = "facultyListToolStripMenuItem";
@@ -298,20 +280,6 @@
             this.currentStudentToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.currentStudentToolStripMenuItem.Text = "Current Student";
             this.currentStudentToolStripMenuItem.Click += new System.EventHandler(this.currentStudentToolStripMenuItem_Click);
-            // 
-            // appliedStudentToolStripMenuItem
-            // 
-            this.appliedStudentToolStripMenuItem.Name = "appliedStudentToolStripMenuItem";
-            this.appliedStudentToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.appliedStudentToolStripMenuItem.Text = "Applied Student";
-            this.appliedStudentToolStripMenuItem.Click += new System.EventHandler(this.appliedStudentToolStripMenuItem_Click);
-            // 
-            // groupsToolStripMenuItem
-            // 
-            this.groupsToolStripMenuItem.Name = "groupsToolStripMenuItem";
-            this.groupsToolStripMenuItem.Size = new System.Drawing.Size(57, 22);
-            this.groupsToolStripMenuItem.Text = "Groups";
-            this.groupsToolStripMenuItem.Click += new System.EventHandler(this.groupsToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
